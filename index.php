@@ -81,7 +81,7 @@ include 'header.php';
 
             </section>
 
-            blooobla blee blapg
+
 
             <div class="self-quote-img"></div>
         
