@@ -1,0 +1,2271 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+/* My code */
+
+
+
+
+h1 {
+  font-size: 3rem;
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+
+p {
+  font-size: 1rem;
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+
+
+/* header */
+
+header {
+  width: 100%;
+  height:  54px;
+  background-color: #CE3535;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+z-index: 1000;
+transition: height 700ms ease-in-out;
+}
+
+.menu-activated {
+  height: 100vh;
+ height: calc(var(--vh, 1vh) * 100); 
+  
+}
+
+.menu-activated::after{
+content: "";
+position: absolute;
+width: 100%;
+height: 100vh; 
+top:0;
+left:0;
+background-image: url('img/home-collage/nav/TheGiftofLight_30.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+opacity: 0.07;
+z-index: -2;
+}
+
+.menu--icon {
+width: 25px;
+height: 25px;
+position: absolute;
+left: 20px;
+top: 14.5px;
+}
+
+
+
+.tiago--name--hdr {
+position: absolute;
+color: white;
+font-weight: 100;
+margin: 0;
+text-align: center;
+padding: 0;
+top: 25px;
+transform: translate(0, -50%);
+}
+
+.tiago--name--hdr a {
+  text-decoration: none;
+  color: white;
+  }
+
+.fa-moon {
+position: fixed;
+right: 20px;
+top: 29px;
+color: white;
+font-size: 20px;
+opacity: 0;
+transform: translate(0, -50%);
+}
+
+.fa-sun {
+  position: fixed;
+  right: 20px;
+  top: 29px;
+  color: white;
+  font-size: 20px;
+opacity: 0;
+transform: translate(0, -50%);
+}
+
+.lang {
+  display: none;
+}
+
+.lang-active{
+  display: block;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+}
+
+.lang-active a {
+  font-size: 0.7rem;
+  color: black;
+
+}
+
+.english {
+ 
+}
+
+.japanese {
+  text-decoration: none;
+}
+
+
+nav {
+display: none;
+width: 130px;
+}
+
+.nav--active {
+display: block;
+position: relative;
+}
+
+nav ul {
+text-decoration: none;
+list-style: none;
+text-align: center;
+padding: 0;
+}
+
+nav ul li {
+margin: 95px 0; 
+}
+
+nav ul li a {
+text-decoration: none;
+color: white;
+font-family: 'Exo 2', sans-serif;
+font-weight: 300;
+}
+
+.nav-active {
+}
+
+.nav-active::after {
+  display: block;
+  content: "";
+  /* position: absolute; */
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  background-color: white;
+}
+
+
+
+
+/* Socials */
+
+
+.socials-ctn {
+  display: none;
+}
+
+.social-menu-ctn {
+  position: absolute;
+  bottom: 0;
+  padding: 1em;
+  width: 76%;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  color: white;
+  font-weight: 100;
+  z-index: 10;
+  display: flex;
+  }
+
+
+
+ 
+
+.pixiv {
+width: 1.4rem;
+height: 1.4rem;
+filter: invert(100%);
+}
+
+
+
+i {
+font-size: 1.4rem;
+}
+
+.fab, .far {
+color: white;
+}
+
+
+/* hompage */
+
+
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top: 8px solid #CE3535;
+  z-index: 10;
+}
+
+
+
+.hero-section {
+  top: 52px;
+  position: sticky;
+  opacity: 1;
+  height: calc(100vh - 54px);
+z-index: -5;
+position: -webkit-sticky;
+position: -moz-sticky;
+position: -ms-sticky;
+position: -o-sticky;
+overflow: hidden;
+}
+
+.home-img-overlay{
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  width: 100%;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 77%;
+  padding: 0;
+  opacity: 0;
+}
+
+
+  .no-webp .home-img-overlay {
+    background-image: url("img/home-collage/about-img/Final/about-img-teamwork-mob-smaller-cropped.jpg");
+    background-position: center;
+      }
+    
+    .webp .home-img-overlay{
+      background-image: url("img/home-collage/about-img/Final/final-final/about-img-teamwork-mob-smaller-cropped.webp");
+      background-position: center;
+    }
+
+
+.hero-controls-ctn {
+  display: none;
+}
+
+
+
+
+.freelance-ctn {
+  width: 100%;
+    height: calc(12% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+
+}
+
+.freelance-ctn p {
+  text-rendering: geometricPrecision;
+  }
+
+.hero-section p {
+text-align: center;
+font-weight: 300;
+padding: 0;
+margin: 0;
+}
+
+  
+/* about section */
+
+.about-ctn {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: calc(100vh - 54px);
+  justify-items: center;
+  align-items: flex-start;
+  position: sticky;
+  position: -webkit-sticky;
+position: -moz-sticky;
+position: -ms-sticky;
+position: -o-sticky;
+  top: 20px;
+  z-index: -1;
+  margin: 0 0 300px 0; 
+  }
+
+  
+
+.about--txt-ctn {
+width: 100%;
+margin: 90px 0 0 0;
+text-align: center;
+}
+
+
+.about-ctn h3 {
+width: 100%;
+font-size: 1rem;
+text-align: center;
+margin: 10px 0 0 0 !important;
+font-weight: 600;
+margin-block-start: 0 !important;
+}
+
+.about-ctn p {
+font-size: 0.85rem;
+text-align: center;
+margin: 30px 25px !important;
+text-rendering: optimizeLegibility;
+}
+
+.about-main-img {
+width: 100%;
+height: 45vh;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+position: relative;
+}
+
+.no-webp .about-main-img  {
+  background-image: url("img/comics/RushHour/jpg/mobile/RushHour_1.jpg");
+  }
+  
+  .webp .about-main-img  {
+    background-image: url("img/comics/RushHour/webp/mobile/RushHour_1.webp");
+  }
+  
+
+
+/*client section */
+
+
+.client-section {
+  position: sticky;
+  position: -webkit-sticky;
+position: -moz-sticky;
+position: -ms-sticky;
+position: -o-sticky;
+width: 100%;
+height: calc(100vh - 54px);
+display: flex;
+flex-flow: row wrap;
+opacity: 1;
+z-index: 20;
+}
+
+
+.clients-ctn {
+width: 100%;
+height: 12%; 
+min-height: 84px;
+margin: 0 20px;
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+align-items:center;
+
+}
+
+.client-hdr {
+width: 100%;
+font-size: 1rem;
+font-weight: 500;
+
+}
+
+.clients {
+width: 19%;
+height: 100px;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+filter: grayscale(100%);
+display: flex;
+align-items: center;
+}
+
+.client-1 {
+background-image: url('img/clients/Edited/illy.svg');
+filter:invert(100%);
+}
+
+.client-2 {
+background-image: url('img/clients/Edited/new-scientist.svg');
+}
+
+.client-3 {
+background-image: url('img/clients/Edited/nhs.svg');
+filter:invert(100%);
+}
+
+.client-4 {
+background-image: url('img/clients/Edited/vodafone.svg');
+}
+
+
+.girl-on-train-img {
+width: 100%;
+height: 88%;
+background-position: 46% 0%;
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.no-webp .girl-on-train-img {
+  background-image: url("img/home-collage/subway/subway.jpg");
+  }
+  
+  .webp .girl-on-train-img{
+  background-image: url('img/home-collage/subway/subway.webp');
+  }
+  
+
+
+
+.tiago-quote-ctn {
+opacity: 0;
+position: absolute;
+bottom: 5%;
+display: flex;
+flex-flow: row wrap;
+opacity: 0;
+width: 100%;
+transform: translate(-100%, 0);
+}
+
+
+.tiago-quote {
+margin: 0 20px;
+width: 100%;
+color: #CE3535;
+}
+
+.tiago-quoter {
+width: 100%;
+margin: 10px 20px;
+text-align: right;
+font-size: 0.85rem;
+}
+
+.quote-2 {
+  display: none;
+
+}
+
+
+
+/* self quote */
+
+.self-qoute-section {
+  width: 100%;
+  height: 40vh;
+  min-height: 270px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: sticky;
+  position: -webkit-sticky;
+position: -moz-sticky;
+position: -ms-sticky;
+position: -o-sticky;
+  top: 54px;
+  z-index: 90;
+  display: none;
+
+}
+
+.self-quote-txt{
+  margin: 40px 0 0 20px;
+  font-size: 1.7rem;
+  font-weight: 400;  
+  width: 56%; 
+}
+
+.self-quote-img {
+  position: absolute;
+  right: 0;
+  display: none;
+  background-image: url('img/illustrations/MoreIllustration/jpg/mobile/main-image.jpg');
+  width: calc(100vw / 2.4);
+  max-width: 400px;
+  max-height: 400px;
+  height: calc(100vw / 2.4);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.tiago-challenges {
+  display: none;
+}
+
+
+/* about contact */
+
+.about-contact-section {
+  top: 54px;
+  flex-flow: row wrap;
+  width: 100%;
+  height: calc(100vh - 54px); 
+  position: sticky;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  display: none;
+  z-index: 20;
+  }
+
+  .about-bg {
+    width: 100%;
+    height: 83%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 27.5% 0;
+    z-index: 75;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.151);
+    background-image: url("img/tiago-personal-img/_MG_7030_mob.jpg");
+  }
+
+ 
+  .commision-ctn {
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
+    display: flex;
+    height: 7%;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+
+  .commision-ctn p {
+    font-size: 0.85rem;
+
+  }
+  .contact-button {
+    width: 100%;
+    height: 10%;
+     background: #323232;
+    color: white;
+    position: sticky;
+    position: -webkit-sticky;
+position: -moz-sticky;
+position: -ms-sticky;
+position: -o-sticky;
+    border: none;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.103);
+
+  }
+
+
+  /* Page Footer */
+
+  .page-footer-ctn {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 0 0 30px 0;
+  }
+
+  .page-socials-ctn{
+    padding: 1em;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    display: flex;
+    margin: 0 15%;
+    }
+  
+
+  .page-pixiv {
+  width: 1.4rem;
+  height: 1.4rem;
+  }
+  
+  
+  .page-social {
+  color: black;
+  }
+
+
+
+
+  /* WORK PAGE */
+
+
+    
+    .work-txt-ctn {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      position: absolute;
+      top: 95px;
+      }
+      
+      
+      .work-txt-ctn h3 {
+      width: 100%;
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+      margin-block-start: 0;
+      }
+      
+      .work-txt-ctn p {
+      font-size: 0.85rem;
+      text-align: center;
+      margin: 20px 15px;
+      text-rendering: optimizeLegibility;
+      }
+
+
+      .work-img-section {
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        position: absolute;
+        top: 230px;
+        left: 5%;
+        margin: 0;
+      }
+
+      .work-img-section-ctn {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+
+      }
+
+
+      .work-hdr {
+        font-size: 0.85rem;
+        text-align: center;
+        font-weight: 500;
+        margin: 40px 0 10px 0;
+        font-weight: 600;
+      }
+
+      .work-hdr a {
+        text-decoration: none;
+        color: black;
+      }
+
+
+      .work-img-ctn {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .work-img{
+        width: 32%;
+        height: calc(100vw / 3.2);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+
+/* Daily Black Here 2020 images */
+
+
+.no-webp .daily-20-1 {
+  background-image: url("img/illustrations/DailyBlackHero_20/jpg/mobile/BarackObama.jpg");
+}
+  
+  .webp .daily-20-1{
+  background-image: url('img/illustrations/DailyBlackHero_20/webp/mobile/BarackObama.webp');
+  }
+  
+
+  .no-webp .daily-20-2 {
+    background-image: url("img/illustrations/DailyBlackHero_20/jpg/mobile/CathayWilliams.jpg");
+  }
+    
+  .webp .daily-20-2{
+    background-image: url('img/illustrations/DailyBlackHero_20/webp/mobile/CathayWilliams.webp');
+    }
+  
+    
+.no-webp .daily-20-3 {
+      background-image: url("img/illustrations/DailyBlackHero_20/jpg/mobile/ColinKaepernick.jpg");
+    }
+      
+.webp .daily-20-3{
+      background-image: url('img/illustrations/DailyBlackHero_20/webp/mobile/ColinKaepernick.webp');
+      }
+            
+/* Daily Black Here 2019 images */
+
+.no-webp .daily-19-1 {
+background-image: url("img/illustrations/DailyBlackHero_19/jpg/mobile/MartinLutherKing.jpg");
+}
+  
+  .webp .daily-19-1{
+background-image: url('img/illustrations/DailyBlackHero_19/webp/mobile/MartinLutherKing.webp');
+}
+  
+
+  .no-webp .daily-19-2 {
+background-image: url("img/illustrations/DailyBlackHero_19/jpg/mobile/MuhammadAli.jpg");
+}
+    
+  .webp .daily-19-2{
+background-image: url('img/illustrations/DailyBlackHero_19/webp/mobile/MuhammadAli.webp');
+}
+  
+    
+.no-webp .daily-19-3 {
+  background-image: url("img/illustrations/DailyBlackHero_19/jpg/mobile/NinaSimone.jpg");
+}
+      
+.webp .daily-19-3{
+background-image: url('img/illustrations/DailyBlackHero_19/webp/mobile/NinaSimone.webp');
+}
+            
+/* T-sensei images */
+
+.no-webp .Stamps-1 {
+  background-image: url("img/illustrations/T-senseiStamps/png/1.png");
+  }
+    
+    .webp .Stamps-1{
+  background-image: url('img/illustrations/T-senseiStamps/webp/1.webp');
+  }
+    
+  
+    .no-webp .Stamps-2 {
+  background-image: url("img/illustrations/T-senseiStamps/png/2.png");
+  }
+      
+    .webp .Stamps-2{
+      background-image: url('img/illustrations/T-senseiStamps/webp/2.webp');  
+    }
+    
+      
+  .no-webp .Stamps-3 {
+    background-image: url("img/illustrations/T-senseiStamps/png/3.png");
+  }
+        
+  .webp .Stamps-3{
+    background-image: url('img/illustrations/T-senseiStamps/webp/3.webp'); 
+  
+  }
+
+
+/* Gallery */ 
+
+.illustrations-gallery-img-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 0px 0 50px 0;
+
+}
+
+
+.gallery-img-section {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  position: absolute;
+  top: 130px;
+  left: 5%;
+  margin: 0 0 50px 0;
+}
+
+.gallery-img{
+width: 100%;
+height: calc(100vw / 10 * 9);
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+margin: 0 0 20px 0;
+
+}
+
+.clicked-gallery-img-bg {
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 54px);
+  height: calc(var(--vh, 1vh) * 100 - 54px);
+  background-color: white;
+  z-index: 200;
+  bottom: 0;
+}
+
+.clicked-gallery-img {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: 0 20px 0 0px;
+  width: 100%;
+  height: 100vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-img-title{
+  font-size: 0.85rem;
+  color:black;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0); 
+}
+
+.work-txt-header {
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 95px;
+    z-index: 100;
+}
+
+.work-txt-header p {
+  font-size: 0.85rem;
+  margin: 0 0 0 10px;
+  }
+
+
+@media only screen and (max-height: 660px) {
+  
+  .about-ctn h3 {
+    font-size: 1rem;
+  }
+
+  .about-ctn p {
+    font-size: 0.85rem;
+  }
+
+  .about-main-img {
+    height: 45vh;
+
+  }
+
+  .tiago-quote-ctn {
+    bottom: 1%;
+  }
+
+  .tiago-quote {
+    font-size: 1.6rem;
+  }
+
+  .about--txt-ctn {
+    margin: 70px 0 0 0;
+  }
+
+  .self-quote-txt{
+    margin: 20px 0 0 20px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    width: 55%;
+    }
+
+    .work-txt-ctn h3 {
+      font-size: 1rem;
+      }
+      
+      .work-txt-ctn p {
+      font-size: 0.85rem;
+
+      }
+
+
+}
+
+
+@media only screen and (max-height: 499px) {
+
+
+  .about-bg {
+    background-size: 153%;
+    background-position: 12% 28%;
+  }
+
+  .self-quote-img {
+    right: 3%;
+  }
+
+  nav ul li {
+    margin: 60% 0; 
+    }
+
+}
+
+
+
+/* comics */
+
+
+.comic-txt-ctn {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  position: absolute;
+  top: 95px;
+  }
+  
+
+.comic-img-section {
+  width: 90%;
+  position: relative;
+  top: 255px;
+  left: 5%;
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+
+.comic-img-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+
+.comic-img{
+  width: 100%;
+  height: 45vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+
+.comic-title {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0 65px 0;
+}
+
+
+.hourly-comic-txt {
+  margin: 15px 0 50px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.comic-wrapper-1 {
+  opacity: 1;
+}
+
+.comic-wrapper-2 {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.comic-wrapper-3 {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.comic-wrapper-4 {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+.comic-wrapper-5 {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+
+.fade-in {
+  opacity: 1;
+
+}
+
+.no-webp .comic-one  {
+  background-image: url("img/comics/RushHour/jpg/mobile/RushHour_4.jpg");  
+}
+ 
+  
+  .webp .comic-one   {
+    background-image: url("img/comics/RushHour/webp/mobile/RushHour_4.webp");
+  }
+
+  .no-webp .comic-two  {
+    background-image: url("img/comics/Teamwork/jpg/mobile/Teamwork_1.jpg");
+    }
+    
+    .webp .comic-two  {
+      background-image: url("img/comics/Teamwork/webp/mobile/Teamwork_1.webp");
+    }
+
+    .no-webp .comic-three  {
+      background-image: url("img/comics/TheGiftofLight/jpg/mobile/TheGiftofLight_1.jpg");
+      }
+      
+      .webp .comic-three   {
+        background-image: url("img/comics/TheGiftofLight/webp/mobile/TheGiftofLight_1.webp");
+      }
+
+      .no-webp .comic-four  {
+        background-image: url("img/comics/SingleMother/jpg/mobile/SingleMother_1.jpg");
+        }
+        
+        .webp .comic-four  {
+          background-image: url("img/comics/SingleMother/webp/mobile/SingleMother_1.webp");
+        }
+
+        .no-webp .comic-five  {
+          background-image: url("img/comics/HourlyComicDay/jpg/mobile/HourlyComicDay_1.jpg");
+       
+          }
+          
+          .webp .comic-five  {
+            background-image: url("img/comics/HourlyComicDay/webp/mobile/HourlyComicDay_1.webp");
+          }
+
+  
+/* Loader */
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: white;
+  display:none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-out;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #CE3535; 
+  animation: loader 2s infinite ease;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #CE3535;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+
+/* comic reader */
+
+.comic-reader-ctn {
+  display: none;
+  width: 100%;
+  flex-flow: row wrap;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100 - 54px);
+  margin: 54px 0 0 0;
+}
+
+.comic-reader-header {
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    height: 12.5%;
+
+}
+
+.comic-reader-header p {
+font-size: 0.85rem;
+}
+
+
+.comic-return-title {
+  opacity: 0.35;
+  margin-right: 10px;
+
+}
+
+.comic-reader-title {
+  margin: 0 5px 0 10px;
+}
+
+.comic-return-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.comic-reader-img-wrapper {
+  width: 100%;
+  height: 90%;
+}
+
+.comic-reader-img {
+  width: 100%;
+  height: 87.5%;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  image-rendering: initial;
+}
+
+
+.comic-page-prev {
+  display: none;
+}
+
+.comic-page-next {
+  display: none;
+}
+
+
+
+.swipe-txt {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+  bottom: 0%;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+
+
+
+.darkmode-background {
+background-color: rgb(31, 30, 30);
+transition: background-color 1s ease-in-out;
+}
+
+.darkmode-font {
+  filter: invert(100%);
+  transition: filter 1s ease-in-out;
+}
+
+.page-counter {
+  font-size: 0.85rem;
+ 
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 800px) {
+
+/* header */
+
+
+.menu--icon {
+  display:none;
+}
+
+.tiago--name--hdr {
+left: 40px;
+}
+
+
+
+nav {
+display: block;
+position: absolute;
+top: 0;
+width: 315px;
+height: 54px;
+/*margin-left: 4px; */
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+nav ul li {
+  margin: 0;
+  text-align: center;
+}
+
+
+.nav-hover::after {
+  display: block;
+  content: "";
+  /* position: absolute; */
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  max-width: 100%;
+  margin: auto;
+  background-color: white;
+  transition: .3s;
+  transform-origin: center center;
+}
+
+.nav-hover:hover::after {
+  width: 100%;
+}
+
+
+
+/* a links */
+
+
+.light-hover::after {
+  display: block;
+  content: "";
+
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  max-width: 100%;
+  margin: auto;
+  background-color: black;
+  transition: .3s;
+  transform-origin: center center;
+}
+
+.light-hover:hover::after {
+  width: 100%;
+}
+
+
+
+.lang {
+  display: flex;
+    right: 40px;
+    position: absolute;
+    height: 54px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+}
+
+.lang a {
+  color:black;
+}
+
+.socials-ctn {
+  display: flex;
+  opacity: 0;
+  top: 0;
+
+  align-items: center;
+  position: absolute;
+  right: 40px;
+  height: 54px;
+  min-width: 168px;
+
+  justify-content: space-between;
+  transform: translate(0, -50px);
+  transition: transform 1s ease-in-out;
+}
+
+.socials-ctn i {
+  font-size: 1.1rem;
+}
+
+.pixiv {
+  height: 1rem;
+  width: 1rem;
+
+}
+
+/* Home */
+
+.hero-section {
+  top: 52px;
+  opacity: 1;
+  height: calc(100vh - 54px);
+z-index: -5;
+}
+
+.home-img-overlay{
+
+  background-size: contain;
+  height: 200vh;
+  opacity: 0;
+  width: 75%;
+  transition: background-Image 0.2s ease-in-out, opacity 0.2s ease-out;
+  background-color: white;
+  transform: translate(0, 25px);
+}
+
+.no-webp .home-img-overlay {
+  background-image: url("img/comics/SingleMother/jpg/mobile/SingleMother_3.jpg");
+ 
+  }
+  
+  .webp .home-img-overlay{
+  background-image: url("img/comics/SingleMother/webp/mobile/SingleMother_3.webp");
+
+  }
+
+
+  .hero-controls-ctn {
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    bottom: 3.7%;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    flex-flow: row wrap;
+    font-size: 0.85rem;
+    z-index: 300;
+    align-items: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.058);
+    opacity: 1;
+    padding: 0.2em;
+  }
+
+
+
+  .hero-controls-ctn i {
+    font-size: 0.85rem;
+    z-index: 500;
+  }
+
+  .hero-controls-txt {
+    position: absolute;
+    right: -50px;
+    width: 250px;
+    font-weight: 300;
+    top: 2px;
+    font-size: 0.85rem;
+    font-family: 'Exo 2', sans-serif;
+    z-index: -20;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
+  }
+
+  .freelance-ctn {
+  height: 12%;
+    }
+
+
+
+
+.freelance-ctn {
+  height: 12%;
+  z-index: 1000;
+  position: absolute;
+  background: white;
+  bottom: -2px;
+}
+
+
+
+.arrow-down {
+  bottom: 5px;
+}
+
+/* about section */
+
+.about-ctn {
+  width: 750px;
+  height: calc(100vh - 54px);
+  top: 65px;
+  margin: 0 auto; 
+  }
+
+  .about--txt-ctn {
+   margin: 65px 0 0 0;
+    }
+    
+
+  .about-ctn h3 {
+    font-size: 1.2rem;
+  }
+
+
+  .about-ctn p {
+    font-size: 1rem;
+    margin: 1.5em 1em !important;
+    line-height: 26px;
+    }
+
+    .about-main-img {
+      height: 62.5vh;
+      }
+
+
+      .no-webp .about-main-img  {
+        background-image: url("img/comics/Teamwork/jpg/desktop/Teamwork_8.jpg");
+        }
+        
+        .webp .about-main-img  {
+          background-image: url("img/comics/Teamwork/webp/desktop/Teamwork_8.webp");
+        }
+        
+
+/* client section */
+
+.clients-ctn {
+margin: 0px 19%;
+height: 14%
+}
+
+
+.clients {
+  height: 100%;
+  text-align: center;
+  width: 14%;
+}
+
+.client-hdr {
+  font-size: 1.2rem;
+  }
+
+.tiago-quote-ctn {
+width: 35%;
+left: 10%;
+bottom: 25%;
+}
+
+.tiago-quote {
+  margin: 0;
+  font-size: calc(1.8vw + 6px);
+  padding: 0;
+  text-align: center;
+}
+
+.tiago-quoter {
+  font-size: calc(0.5vw + 8px);
+
+  margin: 30px 0 0 0;
+  }
+
+
+  .quote-2 {
+    display: none;
+    flex-flow: row wrap;
+    width: 35%;
+    display: none;
+    position: absolute;
+    right: 10%;
+ 
+bottom: 25%;
+  }
+  
+  .girl-on-train-img {
+    height: 86%;
+  }
+
+
+.self-qoute-section {
+  height: 70vh;
+}
+
+.self-quote-txt{
+  margin: 8.5vh 0 0 10vw;
+  font-size: 2.5vw;
+  font-weight: 400;  
+  width: 35vw; 
+}
+
+.tiago-challenges {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+    top: 37%;
+    left: 10vw;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.tiago-challenge-one {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  align-items: center;
+}
+
+.challenge-one-img  {
+  margin-right: 40px;
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.185);
+}
+
+.no-webp .challenge-one-img {
+  background-image: url('img/illustrations/DailyBlackHero_20/jpg/desktop/ChuckBerry.jpg');
+  }
+  
+  .webp .challenge-one-img  {
+    background-image: url('img/illustrations/DailyBlackHero_20/jpg/desktop/ChuckBerry.jpg');
+  }
+  
+
+  .tiago-challenge-two {
+    margin-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .challenge-two-img  {
+    margin-right: 40px;
+    width: 120px;
+    height: 120px;
+    background-size: 150%;
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.185);
+
+  }
+  
+  .no-webp .challenge-two-img {
+    background-image: url('img/comics/SingleMother/jpg/desktop/SingleMother_12.jpg');
+    }
+    
+    .webp .challenge-two-img  {
+      background-image: url('img/comics/SingleMother/webp/desktop/SingleMother_12.webp');
+    }
+    
+    .tiago-challenges p {
+      font-size: 1.2rem;
+    }
+
+
+
+  .tiago-challenges a  {
+    color: black;
+  }
+
+
+  .self-quote-img {
+   right: 10vw;
+   width: calc(100vw / 2.4);
+   max-width: 50vw;
+   max-height: 500px;
+  }
+
+
+  .about-bg {
+   background-position: 27.5% 20%;
+  }
+
+
+    /* work page */
+
+.work-txt-ctn {
+  top: 130px;
+  width: 850px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.work-txt-ctn h3 {
+  font-size: 1.2rem;
+  margin: 0 0 1em 0;
+}
+
+
+.work-txt-ctn p {
+  font-size: 1rem;
+  line-height: 26px;
+  margin: 20px 35px;
+}
+
+.work-img-section {
+  top: 340px; 
+  width: 100%;
+  margin: 0 auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.work-img-section-ctn {
+  width: 1000px;
+  margin: 0 auto; 
+}
+
+
+.work-hdr {
+font-size: 1rem;
+width: fit-content;
+text-align: left;
+margin: 40px 0 26px 0;
+}
+
+
+.work-img{
+  width: 32%;
+  height: 330px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: scale .2s ease-in-out;
+}
+
+
+
+.work-txt-header {
+  top: 110px;
+}
+
+
+.gallery-img-section {
+  top: 170px;
+}
+
+
+
+.gallery-img {
+  width: 100%;
+  height: 50vh;
+  margin: 10px 0 100px 0;
+  overflow: hidden;
+}
+
+
+
+.desk-txt-center {
+  text-align: center;
+  margin: 120px 0 26px 0;
+  width: 100%;
+}
+
+
+
+.clicked-gallery-img {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 0 0;
+  width: 100%;
+  height: calc(100vh - 54px);
+}
+
+.fa-moon {
+ right: 40px; 
+}
+
+.fa-sun {
+  right: 40px; 
+ }
+
+/* comics */
+
+
+.comic-img-section {
+  top: 325px;
+}
+
+.comic-img-wrapper {
+width: 26.5%;
+min-width: 350px;
+cursor: pointer;
+}
+
+.comic-img {
+height: 50vh;
+width: 100%;
+left: 0;
+margin: 0 auto;
+}
+
+
+.comic-title {
+  margin: 10px 0 150px 0;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.comic-five {
+  margin: -55px 0 0 0px;
+}
+
+.hourly-comic-txt {
+  margin: 10px 0 95px 0;
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+
+/* comic viewer */
+
+.work-txt-header p  {
+
+font-size: 1rem;
+
+}
+
+.comic-reader-header p {
+  font-size: 1rem;
+}
+
+
+.comic-page-prev {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(0, -50%);
+}
+
+.comic-page-next {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 25%;
+  transform: translate(0, -50%);
+}
+
+.comic-page-next i {
+  font-size: 2rem;
+}
+
+.comic-page-prev i {
+  font-size: 2rem;
+}
+
+
+.swipe-txt {
+  display: none;
+}
+
+.comic-controls-ctn-left {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 20%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  flex-flow: row wrap;
+  font-size: 0.85rem;
+  z-index: 300;
+  align-items: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.058);
+  opacity: 1;
+  padding: 0.2em;
+}
+
+.comic-controls-ctn-right {
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 20%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  flex-flow: row wrap;
+  font-size: 0.85rem;
+  z-index: 300;
+  align-items: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.058);
+  opacity: 1;
+  padding: 0.2em;
+}
+
+
+
+.comic-controls-ctn i {
+  font-size: 0.85rem;
+  z-index: 500;
+}
+
+
+
+
+/* footer */
+
+.page-socials-ctn {
+  max-width: 300px;
+}
+
+.tiago-txt-footer {
+  width: 100%;
+  text-align: center;
+}
+
+      /* media query end */
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+
+  .comic-reader-header{
+  height: 7.5%;
+  left: 40px;
+  position: absolute;
+  justify-content: flex-start;
+}
+
+.comic-reader-img-wrapper {
+  height: 100%;
+}
+
+.comic-reader-img {
+  height: 100%;
+  background-position: center;
+
+;}
+
+
+}
