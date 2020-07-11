@@ -8,7 +8,6 @@ const getHeroSection = document.getElementsByClassName("hero-section");
 const getAboutCtn = document.querySelector('.about-ctn');
 const getClientSection = document.querySelector('.client-section');
 const getAboutContactSec = document.querySelector('.about-contact-section');
-const selfQuoteImg = document.querySelector(".self-quote-img ");
 const selfQuote = document.querySelector(".self-qoute-section");
 
 
@@ -297,7 +296,6 @@ function addLastHomeSecitons() {
 
 
   selfQuote.style.display = "flex";
-  selfQuoteImg.style.display = "block";
   getAboutContactSec.style.display = "flex";
 
 
@@ -396,19 +394,7 @@ function addLastHomeSecitons() {
 
 
     
-    let animeAppear = TweenMax.fromTo(selfQuoteImg, 3, {y: 700, opacity: 0}, {y: 0, opacity: 1});
-     
-    
-
-    let sceneFive = new ScrollMagic.Scene({
-      duration: "80%", 
-      triggerElement: ".self-qoute-section", 
-      triggerHook: 1
-    }) 
-    
-    
-    .setTween(animeAppear)
-    .addTo(controller);
+ 
   
 
     
@@ -417,40 +403,6 @@ function addLastHomeSecitons() {
 };
 
 
-/* mobile resize */
-
-let mobileHoriz = 0;
-
-window.addEventListener('resize', function(){
-
-
-
-  if(window.innerHeight < 499) {
-
-  window.scrollTo(0, 0);
-  mobileHoriz = 1;
-
-  setTimeout(function(){
-
-    selfQuotePos = selfQuote.getBoundingClientRect().y + window.pageYOffset;
-
-    selfQuoteImg.style.top = selfQuotePos - 50 + "px";
-
-
-
-  }, 100)
-} else if (mobileHoriz === 1){
-  window.scrollTo(0, 0);
-  location.reload();
-
-} 
-
-
-
-
-
-
-})
 
 
 

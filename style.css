@@ -859,8 +859,7 @@ font-size: 0.85rem;
 
 .self-qoute-section {
   width: 100%;
-  height: 40vh;
-  min-height: 270px;
+  height: calc(100vh - 54px); 
   justify-content: flex-start;
   align-items: flex-start;
   position: sticky;
@@ -874,30 +873,6 @@ position: -o-sticky;
 
 }
 
-.self-quote-txt{
-  margin: 40px 0 0 20px;
-  font-size: 1.7rem;
-  font-weight: 400;  
-  width: 56%; 
-}
-
-.self-quote-img {
-  position: absolute;
-  right: 0;
-  display: none;
-  background-image: url('img/illustrations/MoreIllustration/jpg/mobile/main-image.jpg');
-  width: calc(100vw / 2.4);
-  max-width: 400px;
-  max-height: 400px;
-  height: calc(100vw / 2.4);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.tiago-challenges {
-  display: none;
-}
 
 
 /* about contact */
@@ -1300,9 +1275,6 @@ margin: 0 0 20px 0;
     background-position: 12% 28%;
   }
 
-  .self-quote-img {
-    right: 3%;
-  }
 
   nav ul li {
     margin: 60% 0; 
@@ -1905,7 +1877,7 @@ bottom: 25%;
 
 
 .self-qoute-section {
-  height: 70vh;
+  height: 100vh;
 }
 
 .self-quote-txt{
@@ -1989,13 +1961,6 @@ bottom: 25%;
     color: black;
   }
 
-
-  .self-quote-img {
-   right: 10vw;
-   width: calc(100vw / 2.4);
-   max-width: 50vw;
-   max-height: 500px;
-  }
 
 
   .about-bg {

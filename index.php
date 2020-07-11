@@ -65,25 +65,10 @@ include 'header.php';
                 <h2 class="self-quote-txt">"I’m a hard worker and I enjoy taking on different challenges."</h2>
 
 
-                <aside class="tiago-challenges">
-                <div class="tiago-challenge-one">
-                <div class="challenge-one-img"></div>
-                <p class="challenge-one-txt">Latest illustration series: <a href="#"> Daily Black Hero 2020</a></p> 
-                </div> 
-
-                <div class="tiago-challenge-two">
-                <div class="challenge-two-img"></div>
-                <p class="challenge-two-txt">Latest comic: <a href="#"> Single Mother</a></p> 
-                </div> 
-                </aside>
-
-
-
             </section>
 
 
 
-            <div class="self-quote-img"></div>
         
             
                 
@@ -97,8 +82,7 @@ include 'header.php';
             
 
         </main>
-
-poopsie doopsie     
+ 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>
