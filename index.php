@@ -62,8 +62,40 @@ include 'header.php';
            
             <section class="self-qoute-section">
                 
+                <img class="self-img" src="img/tiago-personal-img/tiago-work-img.png" alt="Cartoon image of Tiago Mattis">
+                <div class="self-quote-ctn-left">    
+                <div>  
                 <h2 class="self-quote-txt">"I’m a hard worker and I enjoy taking on different challenges."</h2>
+                <div class="self-quote-left-txt-ctn">
+                <p class="para-hdr">Latest Work</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id est blandit, sodales diam quis, laoreet risus. Pellentesque euismod porta neque non tempus. Sed eget quam non dolor gravida faucibus eu in mauris. Suspendisse tempor facilisis purus non iaculis. Nam laoreet erat nunc, in gravida nibh varius ac. Pellentesque vel eros non massa ornare congue sed vel magna. Praesent eu imperdiet nisi.</p>
+                </div>
+                </div>
+                </div>
+               
 
+                <div class="self-quote-ctn-right">    
+                <aside class="skills-interests-ctn">   
+                <p class="skills-hdr">Skills</p>
+                <div class="skill-ctn">
+                <i class="fas fa-mouse"></i>
+                <p>Photoshop, Illustrator & inDesign</p>
+                </div>
+                <div class="skill-ctn">
+                <i class="fas fa-crop-alt"></i>
+                <p>Graphic Design</p>
+                </div>
+                <div class="skill-ctn">
+                <i class="fas fa-pencil-alt"></i>
+                <p>Sketching / Storyboarding</p>
+                </div>
+                <div class="skill-ctn">
+                <i class="far fa-comments"></i>
+                <p>Fluent in English and Japanese</p>
+                </div>
+               
+                </aside>           
+                </div>
 
             </section>
 

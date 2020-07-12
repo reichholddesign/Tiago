@@ -302,13 +302,11 @@ function addLastHomeSecitons() {
   if (window.innerHeight > 499) {
     selfQuotePos = selfQuote.getBoundingClientRect().y + window.pageYOffset;
 
-    selfQuoteImg.style.top = selfQuotePos + 30 + "px";
 
 
   } else if (window.innerHeight < 499) {
     selfQuotePos = selfQuote.getBoundingClientRect().y + window.pageYOffset;
 
-    selfQuoteImg.style.top = selfQuotePos - 50 + "px";
 
   }
 
@@ -357,14 +355,12 @@ function addLastHomeSecitons() {
 
         if(aboutSelfTextPos < 137) {
           selfQuoteTxt.innerHTML = `"If you have a project you’d like to bring to life, let’s work together!"`;
-      //    getTiagoChallenges.style.display = "none";
-      getTiagoChallenges.style.opacity = "0";
+
           
 
         } else if (aboutSelfTextPos > 137) {  
           selfQuoteTxt.innerHTML = `"I’m a hard worker and I enjoy taking on different challenges."`;
-          //getTiagoChallenges.style.display = "flex";
-          getTiagoChallenges.style.opacity = "1";
+      
         }
 
       }
