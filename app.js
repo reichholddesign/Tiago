@@ -45,14 +45,25 @@ let newPosition = 50;
 let comicPage = 1;
 
 
+const FRAME_DURATION = 1000 / 60;
+const getTime = typeof performance === 'function' ? performance.now : Date.now;
+let lastUpdate = getTime();
+
+
 function backgroundSlide() {
+  const now = getTime();
+  const delta = (now - lastUpdate) / FRAME_DURATION;
 
+  console.log(newPosition);
 
-  newPosition += -0.5;
+  newPosition += -0.5 * delta;
+  console.log('after delta:' + newPosition);
  homeBg[0].style.transform = "translate(0," + newPosition + "px)";
+
+ lastUpdate = now;
  requestAnimationFrame(backgroundSlide);
 
-  if (newPosition === -1000) {
+  if (newPosition < -1000) {
 
 
   nextPage();

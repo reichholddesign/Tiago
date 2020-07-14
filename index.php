@@ -75,26 +75,26 @@ include 'header.php';
                
 
                 <div class="self-quote-ctn-right">    
-                <aside class="skills-interests-ctn">   
-                <p class="skills-hdr">Skills</p>
-                <div class="skill-ctn">
-                <i class="fas fa-mouse"></i>
-                <p>Photoshop, Illustrator & inDesign</p>
-                </div>
-                <div class="skill-ctn">
-                <i class="fas fa-crop-alt"></i>
-                <p>Graphic Design</p>
-                </div>
-                <div class="skill-ctn">
-                <i class="fas fa-pencil-alt"></i>
-                <p>Sketching / Storyboarding</p>
-                </div>
-                <div class="skill-ctn">
-                <i class="far fa-comments"></i>
-                <p>Fluent in English and Japanese</p>
-                </div>
-               
-                </aside>           
+                    <aside class="skills-interests-ctn">   
+                    <p class="skills-hdr">Skills</p>
+                    <div class="skill-ctn">
+                    <i class="fas fa-mouse"></i>
+                    <p>Photoshop, Illustrator & inDesign</p>
+                    </div>
+                    <div class="skill-ctn">
+                    <i class="fas fa-crop-alt"></i>
+                    <p>Graphic Design</p>
+                    </div>
+                    <div class="skill-ctn">
+                    <i class="fas fa-pencil-alt"></i>
+                    <p>Sketching / Storyboarding</p>
+                    </div>
+                    <div class="skill-ctn">
+                    <i class="far fa-comments"></i>
+                    <p>Fluent in English and Japanese</p>
+                    </div>
+                
+                    </aside>           
                 </div>
 
             </section>
