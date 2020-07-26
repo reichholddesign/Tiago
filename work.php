@@ -18,7 +18,7 @@ include 'header.php';
             <section class="work-img-section">
 
             <div class="work-img-section-ctn">
-            <p class="work-hdr"><a class="light-hover"  href="dailyblackhero2020.php">Daily Black Hero 2020</a></p>
+            <p class="work-hdr"><a class="light-hover"  href="dailyblackhero2020.php"><span class="series-txt"> Series:</span> Daily Black Hero 2020</a></p>
                     <a href="dailyblackhero2020.php"  class="work-img-ctn">
                         <div class="work-img daily-20-1"></div>
                         <div class="work-img daily-20-2"></div>
@@ -29,7 +29,7 @@ include 'header.php';
 
 
             <div class="work-img-section-ctn">
-            <p class="work-hdr"><a class="light-hover" href="dailyblackhero2019.php">Daily Black Hero 2019</a></p>
+            <p class="work-hdr"><a class="light-hover" href="dailyblackhero2019.php"><span class="series-txt"> Series:</span> Daily Black Hero 2019</span></a></p>
             
            <a href="dailyblackhero2019.php" class="work-img-ctn">
                         <div class="work-img daily-19-1"></div>
@@ -40,7 +40,7 @@ include 'header.php';
             </div>
 
             <div class="work-img-section-ctn">
-                <p class="work-hdr"><a class="light-hover"  href="sensei-stamps.php">T-sensei Stamps</a></p>
+                <p class="work-hdr"><a class="light-hover"  href="sensei-stamps.php"><span class="series-txt">Series:</span> T-sensei Stamps</a></p>
                 <a href="sensei-stamps.php" class="work-img-ctn">
                         <div class="work-img Stamps-1"></div>
                         <div class="work-img Stamps-2"></div>
@@ -51,7 +51,7 @@ include 'header.php';
 
      
             <div class="illustrations-gallery-img-section">
-   <p class="work-hdr desk-txt-center">Illustrations</p>
+   <p class="work-hdr desk-txt-center"><span class="series-txt">Gallery: </span>Illustrations</p>
             </div>
 
             </section>

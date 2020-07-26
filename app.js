@@ -9,6 +9,7 @@ const getAboutCtn = document.querySelector('.about-ctn');
 const getClientSection = document.querySelector('.client-section');
 const getAboutContactSec = document.querySelector('.about-contact-section');
 const selfQuote = document.querySelector(".self-qoute-section");
+const fadeInOverTxt = document.querySelectorAll(".fade-in-over-txt");
 
 
 /* Page elements */
@@ -30,6 +31,15 @@ const getHeroControls = document.querySelector(".hero-controls-ctn");
 const getHeroControlsTxt = document.querySelector(".hero-controls-txt");
 const getQuoteTwo = document.querySelector(".quote-2");
 const getTiagoChallenges = document.querySelector(".tiago-challenges");
+const getSketchingDiv = document.querySelector(".sketching");
+const getAdobeDiv = document.querySelector(".adobe");
+const getGraphicDiv = document.querySelector(".graphic");
+const getFluencyDiv = document.querySelector(".fluency");
+const getWorkTogTxt = document.querySelector(".work-tog-txt");
+
+
+
+
 
 
 // Set Nav
@@ -49,19 +59,23 @@ const FRAME_DURATION = 1000 / 60;
 const getTime = typeof performance === 'function' ? performance.now : Date.now;
 let lastUpdate = getTime();
 
+let heroOpacity = getHeroSection[0].style.opacity;
+
 
 function backgroundSlide() {
   const now = getTime();
   const delta = (now - lastUpdate) / FRAME_DURATION;
 
-  console.log(newPosition);
 
   newPosition += -0.5 * delta;
-  console.log('after delta:' + newPosition);
- homeBg[0].style.transform = "translate(0," + newPosition + "px)";
+   homeBg[0].style.transform = "translate(0," + newPosition + "px)";
 
  lastUpdate = now;
- requestAnimationFrame(backgroundSlide);
+
+
+
+window.requestAnimationFrame(backgroundSlide);  
+
 
   if (newPosition < -1000) {
 
@@ -70,93 +84,11 @@ function backgroundSlide() {
   
   }
 
+
+  
 };
 
 
-function nextPage(){
-
-  if (comicPage < 17) {
-comicPage += 1;
-homeBg[0].style.opacity = 0;
-
-setTimeout(function(){
-  newPosition = 50;
-  Modernizr.on('webp', function (result) {
-    if (result) {
-  homeBg[0].style.backgroundImage = "url(img/comics/SingleMother/webp/desktop/SingleMother_" + comicPage + ".webp)"
-    }
-    else {
-      homeBg[0].style.backgroundImage = "url(img/comics/SingleMother/jpg/desktop/SingleMother_" + comicPage + ".jpg)"
-
-    }
-  });
-
- 
-  setTimeout(function() {
-    homeBg[0].style.backgroundPosition = "0px 0px";
-    homeBg[0].style.opacity = 1;
-
-    setTimeout(function(){
-      homeBg[0].style.backgroundPosition = "0px " + newPosition + "px";
-
-    }, 50)
-
-
-
-  }, 250)
-
-
-}, 250)
-
-  }
-}
-
-function prevPage(){
-
-if (comicPage > 1) {
-
-  comicPage -= 1;
-  homeBg[0].style.opacity = 0;
-  
-  setTimeout(function(){
-    newPosition = 50;
-    homeBg[0].style.backgroundImage = "url(img/comics/SingleMother/webp/mobile/SingleMother_" + comicPage + ".webp)"
-  
-   
-    setTimeout(function() {
-      homeBg[0].style.backgroundPosition = "0px 0px";
-      homeBg[0].style.opacity = 1;
-      
-      setTimeout(function(){
-        homeBg[0].style.backgroundPosition = "0px " + newPosition + "px";
-  
-      }, 50)
-  
-  
-  
-    }, 250)
-  
-  
-  }, 250)
-} 
-  
-  }
-  
-  window.addEventListener('scroll', function(){
-
-    
-    
-      if(window.innerWidth > 800 && window.pageYOffset > 20) {
-      
-          getHeroControls.style.opacity = "0";
-      }
-    
-    
-      else if (window.innerHeight > 800 && window.pageYOffset < 20) {
-        getHeroControls.style.opacity = "1";
-       
-      }
-    })
 
 
 
@@ -167,15 +99,6 @@ if (comicPage > 1) {
 
 
 
-function showInfoTxt() {
-  getHeroControlsTxt.style.opacity = "1";
-  getHeroControlsTxt.style.right = "0";
-}
-
-function hideInfoTxt() {
-  getHeroControlsTxt.style.opacity = "0";
-  getHeroControlsTxt.style.right = "-50px";
-}
 
 
 
@@ -222,8 +145,9 @@ const controller = new ScrollMagic.Controller();
 
 const heroFade = TweenMax.fromTo(getHeroSection[0], 3, { opacity: 1}, { opacity: 0});
 
+
 let scene = new ScrollMagic.Scene({
-  duration: '70%', 
+  duration: '100%', 
   triggerElemnt: getHeroSection[0], 
   triggerHook: 0
 }) 
@@ -240,7 +164,7 @@ const aboutFade = TweenMax.fromTo(getAboutCtn, 3, { opacity: 1}, { opacity: 0});
 
 
 let sceneTwo = new ScrollMagic.Scene({
-  duration: '70%', 
+  duration: '80%', 
   triggerElement: ".client-section", 
   triggerHook: 1
 }) 
@@ -267,13 +191,7 @@ if (aboutCtnOpacity == 0 && opacityControl == 0) {
 tl.fromTo(getGirlOnTrainImg, 0.4, {opacity: 1}, {opacity: 0.2});
 tl.fromTo(getTiagoQuote, 0.6, {opacity: 0, x: -100}, {opacity: 1, x: 0});
 
-if(window.innerWidth > 1000) {
-  getQuoteTwo.style.display = "flex";
-  const tlTwo = new TimelineMax({delay: 1.15});
-  tlTwo.fromTo(getQuoteTwo, 0.6, {opacity: 0, x: 100}, {opacity: 1, x: 0});
 
-
-}
 
 opacityControl = 1; 
 
@@ -386,14 +304,16 @@ function addLastHomeSecitons() {
 
     
     
-    let quoteAppear = TweenMax.fromTo(selfQuote, 3, { x: -500,  opacity: 0}, { x: 0, opacity: 1});
-    
+    let quoteAppear = TweenMax.fromTo(selfQuote, 2, {opacity: 0}, {opacity: 1});
+
+
     
     
     let sceneFour = new ScrollMagic.Scene({
-      duration: "70%", 
+      duration: "100%", 
       triggerElement: ".self-qoute-section", 
-      triggerHook: 1
+      triggerHook: 1,
+      reverse: false 
     }) 
     
     .setTween(quoteAppear)
@@ -401,11 +321,6 @@ function addLastHomeSecitons() {
 
 
     
- 
-  
-
-    
-       
 
 };
 
@@ -414,4 +329,53 @@ function addLastHomeSecitons() {
 
 
 
+let showSkills = 0;
+
+ window.addEventListener("scroll", function(){
+  quoteStyle= window.getComputedStyle(selfQuote);
+  quoteOpacity = quoteStyle.opacity;
+  if(quoteOpacity > 0.7 && showSkills === 0) {
+    const tlSkills = new TimelineMax({delay: 0.75});
+    tlSkills.fromTo(fadeInOverTxt, 0.8, {opacity: 0, scale: 0.8}, {opacity: 1, scale: 1});
+    showSkills = 1;
+
+    getSketchingDiv.classList.add("ske-per");
+     getAdobeDiv.classList.add("ado-per");
+     getGraphicDiv.classList.add("gra-per");
+     getFluencyDiv.classList.add("lan-per");
+
+
+    setTimeout(function(){
+      addWorkTogText()
+
+    }, 100)
+
+
+  }
+
+
+ })   
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+// contact form pop-up
+
+const getContactFormSec = document.querySelector(".contact-form-section");
+
+function getContactForm(){
+  getContactFormSec.style.display = 'block';
+  const tlForm = new TimelineMax({delay: 0});
+  tlForm.fromTo(getContactFormSec, 0.25, {opacity: 0}, {opacity: 1});
+}
 

@@ -25,7 +25,7 @@ onload="homeStart()">
     </div>
     <nav>
         <ul>
-            <li class="nav-hover"><a href="index.php">Home</a></li>
+            <li class="nav-hover"><a href="index.php">About</a></li>
             <li class="nav-hover"><a href="work.php">Work</a></li>
             <li class="nav-hover"><a href="comics.php">Comics</a></li>
         </ul>

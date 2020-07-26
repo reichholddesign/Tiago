@@ -845,11 +845,6 @@ text-align: right;
 font-size: 0.85rem;
 }
 
-.quote-2 {
-  display: none;
-
-}
-
 
 
 /* self quote */
@@ -932,8 +927,131 @@ position: -o-sticky;
     font-size: 1rem;
     font-weight: 300;
     box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.103);
-
+    cursor: pointer;
   }
+
+/* Contact form pop-up */
+
+.contact-form-section {
+  display: none;
+  opacity: 0  ;
+  width: 100%;
+  height: calc(100vh - 54px); 
+  position: fixed;
+  z-index: 1000;
+  background: white;
+  top: 54px;
+  overflow: scroll;
+}
+
+.contact-form-img-ctn {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("img/Thumbnails/TheGiftofLight_4-mobile.jpg");
+  image-rendering: pixelated;
+}
+
+
+
+
+.form-wrp {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-flow:row wrap;
+}
+
+.form-wrp h3 {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.form-ctn {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 5%;
+  align-items: flex-start;
+}
+
+.std-form-style {
+width: 100%;
+height: 48px;
+background: #FFFFFF;
+border: 0.5px solid #FFFFFF;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+border-radius: 4px;
+margin: 5px 0;
+}
+
+.lrg-form-style {
+  width: 100%;
+  height: 96px;
+  background: #FFFFFF;
+  border: 0.5px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  }
+
+  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 1rem;
+  font-family: 'Exo 2', sans-serif;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    font-size: 1rem;
+    font-family: 'Exo 2', sans-serif;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    font-size: 1rem;
+  font-family: 'Exo 2', sans-serif;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 1rem;
+  font-family: 'Exo 2', sans-serif;
+  }
+
+.no-button-style {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+ 
+}
+
+input, select, textarea{
+  font-family: 'Exo 2', sans-serif;
+}
+
+textarea:focus, input:focus {
+  font-family: 'Exo 2', sans-serif;
+}
+
+
+.fa-paper-plane {
+  color: #CE3535;
+  cursor: pointer;
+}
+
+
+
+
 
 
   /* Page Footer */
@@ -1693,7 +1811,7 @@ nav ul li {
 /* Home */
 
 .hero-section {
-  top: 52px;
+  top: 54px;
   opacity: 1;
   height: calc(100vh - 54px);
 z-index: -5;
@@ -1721,44 +1839,6 @@ z-index: -5;
   }
 
 
-  .hero-controls-ctn {
-    display: flex;
-    position: fixed;
-    justify-content: space-around;
-    bottom: 3.7%;
-    right: 40px;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    flex-flow: row wrap;
-    font-size: 0.85rem;
-    z-index: 300;
-    align-items: center;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.058);
-    opacity: 1;
-    padding: 0.2em;
-  }
-
-
-
-  .hero-controls-ctn i {
-    font-size: 0.85rem;
-    z-index: 500;
-  }
-
-  .hero-controls-txt {
-    position: absolute;
-    right: -50px;
-    width: 250px;
-    font-weight: 300;
-    top: 2px;
-    font-size: 0.85rem;
-    font-family: 'Exo 2', sans-serif;
-    z-index: -20;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out, right 0.3s ease-in-out;
-  }
 
   .freelance-ctn {
   height: 12%;
@@ -1779,19 +1859,23 @@ z-index: -5;
 
 .arrow-down {
   bottom: 5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #CE3535;
+
 }
 
 /* about section */
 
 .about-ctn {
-  width: 750px;
-  height: calc(100vh - 54px);
-  top: 65px;
+  width: 50%;
+  height: 120vh;
+  top: 54px;
   margin: 0 auto; 
   }
 
   .about--txt-ctn {
-   margin: 65px 0 0 0;
+   margin: 8.5vh 0;
     }
     
 
@@ -1802,12 +1886,12 @@ z-index: -5;
 
   .about-ctn p {
     font-size: 1rem;
-    margin: 1.5em 1em !important;
-    line-height: 26px;
+    margin: 1em 1em !important;
+    line-height: 20px;
     }
 
     .about-main-img {
-      height: 62.5vh;
+      height: calc(64vh - 54px);
       }
 
 
@@ -1824,7 +1908,7 @@ z-index: -5;
 
 .clients-ctn {
 margin: 0px 19%;
-height: 14%
+height: 11.5%
 }
 
 
@@ -1835,7 +1919,7 @@ height: 14%
 }
 
 .client-hdr {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   }
 
 .tiago-quote-ctn {
@@ -1852,138 +1936,273 @@ bottom: 25%;
 }
 
 .tiago-quoter {
-  font-size: calc(0.5vw + 8px);
-
+  font-size: calc(0.5vw + 10px);
   margin: 30px 0 0 0;
   }
 
 
-  .quote-2 {
-    display: none;
-    flex-flow: row wrap;
-    width: 35%;
-    display: none;
-    position: absolute;
-    right: 10%;
-    bottom: 25%;
-  }
+  
+
   
   .girl-on-train-img {
     height: 86%;
   }
 
 
+/* self quote section */  
+
 .self-qoute-section {
-  height: 100vh;
+  height: 120vh;
+  opacity: 0;
 }
+
+.self-quote-ctn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;  
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.self-quote-content-wrp {
+margin-top: 5%;
+display: flex;
+flex-flow: row wrap;
+width: 45%;
+}
+
 .self-img {
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 60%;
+  margin: 0 20%;
+  height: auto;
+
 }
 
 
 .self-quote-txt{
-  font-size: 2.5vw;
+  font-size: 1.8vw;
   font-weight: 400;  
-width: 100%;
-margin: 10vh 20% 0 40px;
+margin: 10px 7.5%;
+width: 85%;
+text-align: center;
 }
 
-.fa-comments {
-  color: black;
-}
+/* Self Quote Section: LEFT info panel - SKILLS */
 
 .self-quote-ctn-left {
-  width: 50%;
-  height: 100%;
+  width: 30%;
   display: flex;
+  position: absolute;
+  left: 40px; 
+  top: 5%;
+  opacity: 0;
   flex-flow: row wrap;
 }
-
-.self-quote-left-txt-ctn {
-  margin: 16vh 35% 0 40px;
-}
-
-.para-hdr {
-  font-weight: 600;
-}
-
-
-.self-quote-ctn-right {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  position: relative;
-  background-position: -69px -766px;
-  z-index: -10;
-}
-
-.no-webp .self-quote-ctn-right {
-  background-image: url("img/comics/SingleMother/jpg/desktop/SingleMother_6.jpg");
-  }
-  
-  .webp .self-quote-ctn-right  {
-    background-image: url("img/comics/SingleMother/webp/desktop/SingleMother_6.webp");  
-  
-  }
-
 
 .skills-hdr {
-  background-color: white;
-  border: 1px solid black;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.11);
-  padding: 0.5em 1em;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-.skills-left-wrp {
-  margin: 0 0 0 40px;
-  max-width: 350px;
-}
-
-
-.skills-interests-ctn {
-  max-width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  flex-flow: row wrap;
+ width: 100%;
+font-weight: 600;
+text-align: left; 
+margin: 0 0 1em 0;
 }
 
 .skill-ctn {
   width: 100%;
-  height: 85px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 10px;
-  margin: 10px 0;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.11);
+height: auto;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+background-color: white;
+margin: 0 0 1em 0;
+flex-flow: row wrap;
+}
+
+.skill-ctn p {
+  margin: 0;
 }
 
 .skill-ctn i {
-  margin: 0 20px;
-  font-size: 2rem;
+  font-size: 1rem;
+  margin: 0 15px 0 0;
+  color: #CE3535;
 }
+
+.skill-rating-ctn {
+  width: 100%;
+  height: 10px;
+  margin: 0.5em 0;
+}
+
+.sketching {
+  width: 0%;
+ height: 100%;
+ background: #f59331; /* Old browsers */
+background: -moz-linear-gradient(left, #f59331 0%, #fabf47 50%, #fac248 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #f59331 0%,#fabf47 50%,#fac248 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #f59331 0%,#fabf47 50%,#fac248 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f59331', endColorstr='#fac248',GradientType=1 ); /* IE6-9 */
+transition: width 2s ease-in-out;
+}
+
+.adobe {
+  width: 0%;
+ height: 100%;
+ background: #293b8e; /* Old browsers */
+ background: -moz-linear-gradient(left, #293b8e 0%, #649dd1 50%, #67a4d6 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(left, #293b8e 0%,#649dd1 50%,#67a4d6 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to right, #293b8e 0%,#649dd1 50%,#67a4d6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#293b8e', endColorstr='#67a4d6',GradientType=1 ); /* IE6-9 */
+ transition: width 2.1s ease-in-out;
+}
+
+.graphic {
+  width: 0%;
+ height: 100%;
+ background: #8f2c8e; /* Old browsers */
+ background: -moz-linear-gradient(left, #8f2c8e 0%, #dc7fb2 50%, #f4d3e4 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(left, #8f2c8e 0%,#dc7fb2 50%,#f4d3e4 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to right, #8f2c8e 0%,#dc7fb2 50%,#f4d3e4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f2c8e', endColorstr='#f4d3e4',GradientType=1 ); /* IE6-9 */
+ transition: width 2.2s ease-in-out;
+}
+
+.fluency {
+  width: 0%;
+ height: 100%;
+ background: #41b450; /* Old browsers */
+ background: -moz-linear-gradient(left, #41b450 0%, #cdda3e 50%, #d6dd3a 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(left, #41b450 0%,#cdda3e 50%,#d6dd3a 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to right, #41b450 0%,#cdda3e 50%,#d6dd3a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41b450', endColorstr='#d6dd3a',GradientType=1 ); /* IE6-9 */
+ transition: width 2.3s ease-in-out;
+}
+
+.ske-per{
+  width: 90%;
+}
+
+.ado-per{
+  width: 72%;
+}
+
+.gra-per{
+  width: 80%;
+}
+
+.lan-per{
+  width: 85%;
+}
+
+
+
+
+
+
+
+
+.interest-ctn {
+  margin-top: 1em;
+}
+
+
+/* Self Quote Section: RIGHT info panel - AWARDS */
+
+
+.self-quote-ctn-right {
+  width: 30%;
+  position: absolute;
+  right: 40px; 
+  top: 5%;
+  opacity: 0;
+}
+
+.award-text {
+  text-align: right;
+  margin: 0 0 1em 0;
+}
+
+.self-quote-ctn-right ul  {
+margin: 0;
+list-style: none;
+}
+.self-quote-ctn-right ul li {
+  list-style-position: outside;
+  color: #CE3535;
+  margin: 0 0 1em 0;
+}
+
+.self-quote-ctn-right ul li p {
+  color: black;
+  text-align: right;
+  margin: 0;
+}
+
+
+
+.red-text{
+  color: #CE3535;
+}
+
+
+
+/* About section */
 
 .about-bg {
-background-position: 27.5% 20%;
+  background-position: 50.5% 45%;
+  background-image: url(img/tiago-personal-img/tiago-contact-img-desktop.jpg)
 }
 
 
-    /* work page */
+.work-tog-txt {
+  font-size: 3vw;
+  width: 60%;
+  font-weight: 200;
+  position: absolute;
+  top: 20%;
+  left: 40px;
+}
+
+
+/* contact form pop-up */
+
+.contact-form-section {
+  display: none;
+}
+
+.contact-form-img {
+  width: 55%;
+  background-size: cover;
+  background-image: url("img/Thumbnails/TheGiftofLight_4.jpg");
+}
+
+.form-ctn {
+  width: 25%;
+  margin: 0 37.5%;
+}
+
+
+
+.form-wrp h3 {
+font-size: 1rem;
+margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* work page */
 
 .work-txt-ctn {
-  top: 130px;
-  width: 850px;
+  top: calc(54px + 10vh);
+  width: 65%;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -1996,13 +2215,13 @@ background-position: 27.5% 20%;
 
 .work-txt-ctn p {
   font-size: 1rem;
-  line-height: 26px;
+  line-height: 20px;
   margin: 20px 35px;
 }
 
 .work-img-section {
-  top: 340px; 
-  width: 100%;
+  top: calc(54px + 10vh + 175px);
+  width: 75%;
   margin: 0 auto;
   left: 50%;
   transform: translate(-50%, 0);
@@ -2018,13 +2237,13 @@ background-position: 27.5% 20%;
 font-size: 1rem;
 width: fit-content;
 text-align: left;
-margin: 40px 0 26px 0;
+margin: 20px 0 26px 0;
 }
 
 
 .work-img{
   width: 32%;
-  height: 330px;
+  height: calc(75vw / 3);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -2042,11 +2261,19 @@ margin: 40px 0 26px 0;
   top: 170px;
 }
 
+.illustrations-gallery-img-section {
+  width: 1000px;
+  margin: 0 auto;
 
+}
+
+.series-txt {
+  font-weight: 300;
+}
 
 .gallery-img {
   width: 100%;
-  height: 50vh;
+  height: 75vh;
   margin: 10px 0 100px 0;
   overflow: hidden;
 }
@@ -2054,10 +2281,12 @@ margin: 40px 0 26px 0;
 
 
 .desk-txt-center {
-  text-align: center;
-  margin: 120px 0 26px 0;
+  margin: 120px 0 49px 0;
   width: 100%;
+  text-align: center;
 }
+
+
 
 
 
@@ -2245,3 +2474,5 @@ font-size: 1rem;
 
 
 }
+
+
