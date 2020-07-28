@@ -126,30 +126,25 @@ include 'header.php';
             <section class="about-contact-section">
 
                 <div class="about-bg">
+                <div class="contact-tiago-img"></div>
                 <h2 class="work-tog-txt">“If you have a project you’d like to bring to life, let’s work together!”</h2>
-                </div>
-                <div class="commision-ctn"><p>Tiago is avaialble for commisions</p></div>
-                <button class="contact-button" onclick="getContactForm()">Contact</button>
-            </section>
-
-        </main>
-
-        <section class="contact-form-section">
-        <div class="contact-form-img-ctn">
-            <div class="contact-form-img"></div>        
-        </div>
-        <div class="form-wrp">     
+                
+                <div class="form-wrp">     
         <h3>Contact</h3>   
             <form class="form-ctn" action="">
             <input class="std-form-style" type="text" placeholder=" Name">
             <input class="std-form-style" type="email" placeholder=" E-mail">
-            <input class="lrg-form-style" type="text" placeholder=" Message">
-            <button class="no-button-style" type="submit"><i class="fas fa-paper-plane"></i></button>
+            <textarea class="form-style" placeholder="Message" rows = "3" cols = "60" name = "description"></textarea>          
+             <button class="no-button-style" type="submit"><i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
+        </div>
 
-        </section>     
+            </section>
 
+        </main>
+
+  
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>

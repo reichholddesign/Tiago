@@ -1,4 +1,30 @@
+let scrollKey = 0;
+console.log(scrollKey);
 
+window.addEventListener("scroll", () => {
+  let scrollTop = window.scrollY;
+  let docHeight = document.body.offsetHeight;
+  let winHeight = window.innerHeight;
+  let scrollPercent = scrollTop / (docHeight - winHeight);
+  let scrollPercentRounded = Math.round(scrollPercent * 100);
+
+  if(scrollPercentRounded === 100 && scrollKey === 0) {
+   setTimeout(() => {
+    scrollKey = 1;
+
+
+   }, 500)
+ 
+  }
+
+
+  if(scrollPercentRounded === 100 && scrollKey === 1) {
+    scrollKey = 2;
+    contactDisplay();
+  }  
+
+  
+});
 
 /* Main Sections */
 
@@ -36,7 +62,8 @@ const getAdobeDiv = document.querySelector(".adobe");
 const getGraphicDiv = document.querySelector(".graphic");
 const getFluencyDiv = document.querySelector(".fluency");
 const getWorkTogTxt = document.querySelector(".work-tog-txt");
-
+const getTiagoContactImg = document.querySelector(".contact-tiago-img");
+const getForm = document.querySelector(".form-wrp");
 
 
 
@@ -228,18 +255,7 @@ function addLastHomeSecitons() {
   getAboutContactSec.style.display = "flex";
 
 
-  if (window.innerHeight > 499) {
-    selfQuotePos = selfQuote.getBoundingClientRect().y + window.pageYOffset;
-
-
-
-  } else if (window.innerHeight < 499) {
-    selfQuotePos = selfQuote.getBoundingClientRect().y + window.pageYOffset;
-
-
-  }
-
-
+  
 
 
 /* set duration variable */
@@ -265,41 +281,6 @@ function addLastHomeSecitons() {
 
 
     
-      window.addEventListener('scroll', function(){
-        aboutSelfTextPos = selfQuoteTxt.getBoundingClientRect().y;
-        if (window.innerWidth < 800) {
-
-        if(aboutSelfTextPos < 95) {
-          selfQuoteTxt.innerHTML = `"If you have a project you’d like to bring to life, let’s work together!"`;
-        
-          
-
-        } else if (aboutSelfTextPos > 95) {
-          selfQuoteTxt.innerHTML = `"I’m a hard worker and I enjoy taking on different challenges."`;
-        }
-
-      }
-
-      if (window.innerWidth > 800) {
-
-        if(aboutSelfTextPos < 137) {
-          selfQuoteTxt.innerHTML = `"If you have a project you’d like to bring to life, let’s work together!"`;
-
-          
-
-        } else if (aboutSelfTextPos > 137) {  
-          selfQuoteTxt.innerHTML = `"I’m a hard worker and I enjoy taking on different challenges."`;
-      
-        }
-
-      }
-
-
-
-
-
-      })
-      
 
 
     
@@ -313,16 +294,37 @@ function addLastHomeSecitons() {
       duration: "100%", 
       triggerElement: ".self-qoute-section", 
       triggerHook: 1,
-      reverse: false 
+      reverse: false
     }) 
     
     .setTween(quoteAppear)
     .addTo(controller);
 
 
+
+    let quoteSecFace = TweenMax.fromTo(selfQuote, 1, {opacity: 1, scale: 1}, {opacity: 0, scale: 0.3});
+    
+    
+    
+    let sceneFive = new ScrollMagic.Scene({
+      duration: "100%", 
+      triggerElement: getAboutContactSec, 
+      triggerHook: 1
+    }) 
+    
+    
+    .setTween(quoteSecFace)
+    .addTo(controller);
+
+
+    
     
 
 };
+
+
+
+
 
 
 
@@ -344,38 +346,64 @@ let showSkills = 0;
      getGraphicDiv.classList.add("gra-per");
      getFluencyDiv.classList.add("lan-per");
 
-
-    setTimeout(function(){
-      addWorkTogText()
-
-    }, 100)
-
-
   }
 
 
  })   
 
 
+function contactDisplay() {
+
+const tlContact = new TimelineMax({delay: 0.25});
+tlContact.fromTo(getTiagoContactImg, 0.6, {opacity: 0, scale: 0.8}, {opacity: 1, scale: 1});
+tlContact.fromTo(getWorkTogTxt, 0.6, {opacity: 0}, {opacity: 1});
+tlContact.fromTo(getForm, 0.6, {opacity: 0}, {opacity: 1});
+arrowDown.style.display = "none";
+
+setTimeout( () => {
+getWorkTogTxt.style.transition = "opacity 0.5s ease-in-out";
+}, 3000);
+
+setTimeout( () => {
+  getWorkTogTxt.style.opacity = "0";
+  }, 3500);
+
+  setTimeout( () => {
+    getWorkTogTxt.innerHTML = "Tiago is available for commisions";
+    }, 4000);
+
+    setTimeout( () => {
+      getWorkTogTxt.style.opacity = "1";
+      }, 4500);
+
+/*
+setTimeout( () => {
+  const tlTxtChgRemove = new TimelineMax({delay: 0.25});
+  tlTxtChgRemove.fromTo(getWorkTogTxt, 0.6, {opacity: 1}, {opacity: 0});
+
+  setTimeout( () => {
+
+
+  }, 200)
+
+  const tlTxtChgAppear = new TimelineMax({delay: 0.85});
+  tlTxtChgAppear.fromTo(getWorkTogTxt, 0.6, {opacity: 0}, {opacity: 1});
+  tlTxtChgAppear.fromTo(getWorkTogTxt, 0.6, {opacity: 0}, {opacity: 1});
+
+
+} , 3000)
+*/
 
 
 
-
-
-
-
-
-
-
-
- 
-// contact form pop-up
-
-const getContactFormSec = document.querySelector(".contact-form-section");
-
-function getContactForm(){
-  getContactFormSec.style.display = 'block';
-  const tlForm = new TimelineMax({delay: 0});
-  tlForm.fromTo(getContactFormSec, 0.25, {opacity: 0}, {opacity: 1});
 }
+
+
+
+
+
+
+
+
+
 
