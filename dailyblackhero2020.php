@@ -8,7 +8,7 @@ include 'header.php';
 <main class="work-main-ctn">
 
 <div class="work-txt-header">
-      <p class="comic-return-title"><a class="light-hover" href="work.php">Work</a></p><p>/</p><p class="comic-reader-title">Daily Black Hero 2020</p>
+      <p class="comic-return-title"><a class="light-hover" href="work">Work</a></p><p>/</p><p class="comic-reader-title">Daily Black Hero 2020</p>
    </div>
 
 <section class="gallery-img-section">
@@ -19,7 +19,8 @@ include 'header.php';
       
 </main>
 
-
+<div class="nxt-gallery-img" > <i class="fas fa-chevron-right"></i></div>
+    <div class="prv-gallery-img" > <i class="fas fa-chevron-left"></i></div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>    

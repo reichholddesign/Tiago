@@ -14,7 +14,7 @@ include 'header.php';
                 </div>
                 <div class="freelance-ctn">
              
-                    <p>Freelance Illustrator</p>
+                    <p class="freelance-txt">Freelance Illustrator</p>
                 </div>
 
             </section>
@@ -23,7 +23,7 @@ include 'header.php';
             <section  class="about-ctn">
 
              <div class="about--txt-ctn">   
-                <h3>About</h3>
+                <h3 class="about-hdr">About</h3>
                 <p id="about">Tiago is a bilingual freelance Illustrator and comic artist currently based in Kumamoto, Japan. His passion for Illustration, comics and design stems from an interest in people and the desire to capture the beauty of life on a blank page.</p>
               
                 <div class="about-main-img">
@@ -67,7 +67,7 @@ include 'header.php';
                     <p class="skills-hdr">Skills</p>
                     <div class="skill-ctn">
                     <i class="fas fa-pencil-alt"></i>
-                    <p>Sketching / Storyboarding</p>
+                    <p class="sketching-skill">Sketching / Storyboarding</p>
                     <div class="skill-rating-ctn"><div class="sketching"></div></div>
                     </div>
                     <div class="skill-ctn">
@@ -77,28 +77,28 @@ include 'header.php';
                     </div>
                     <div class="skill-ctn">
                     <i class="fas fa-crop-alt"></i>
-                    <p>Graphic Design</p>
+                    <p class="graphic-skill">Graphic Design</p>
                     <div class="skill-rating-ctn"><div class="graphic"></div></div>
                     </div>
                     
                     <div class="skill-ctn">
                     <i class="far fa-comments"></i>
-                    <p>Fluent in English and Japanese</p>
+                    <p class="lang-skill">Fluent in English and Japanese</p>
                     <div class="skill-rating-ctn"><div class="fluency"></div></div>
                     </div>
                     <p class="skills-hdr interest-ctn">Interests</p>
                     <div class="skill-ctn">
                     <i class="fas fa-film"></i>
-                    <p>Photography & Film</p>
+                    <p class="photog-interest">Photography & Film</p>
                     </div>
                     <div class="skill-ctn">
                     <i class="fas fa-music"></i>
-                    <p>Music</p>
+                    <p class="music-interest">Music</p>
                     </div>
                     
                     <div class="skill-ctn">
                     <i class="fas fa-plane"></i>
-                    <p>Travel</p>
+                    <p class="travel-interest">Travel</p>
                     </div>        
                 </div>
 
@@ -130,13 +130,15 @@ include 'header.php';
                 <h2 class="work-tog-txt">“If you have a project you’d like to bring to life, let’s work together!”</h2>
                 
                 <div class="form-wrp">     
-        <h3>Contact</h3>   
-            <form class="form-ctn" action="">
-            <input class="std-form-style" type="text" placeholder=" Name">
-            <input class="std-form-style" type="email" placeholder=" E-mail">
-            <textarea class="form-style" placeholder="Message" rows = "3" cols = "60" name = "description"></textarea>          
+        <h3 class="contact-hdr">Contact</h3>   
+        <div class="kwes-form">
+            <form  id="form-ctn" method="POST" action="https://kwes.io/api/foreign/forms/co8dw1DDQtljSLfDLBVE">
+            <input name="name" class="std-form-style input-name" type="text" placeholder=" Name">
+            <input name="email" class="std-form-style input-email" type="email" placeholder=" E-mail">
+   <textarea name="message" class="form-style input-msg" placeholder="Message" rows = "3" cols = "60" name = "description"></textarea> 
              <button class="no-button-style" type="submit"><i class="fas fa-paper-plane"></i></button>
             </form>
+            </div>
         </div>
         </div>
 
@@ -144,14 +146,16 @@ include 'header.php';
 
         </main>
 
-  
-
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js" integrity="sha256-peenofh8a9TIqKdPKIeQE7mJvuwh+J0To7nslvpj1jI=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.js" integrity="sha256-31FC/OT6XpfjAhj9FuXjw5/wPXXawCAjJQ29E23/XPk=" crossorigin="anonymous"></script>
 <script src="./nav.js"></script>
-<script src="./app.js"></script>    
+<script src="./app.js"></script>
+
+
+<script src="https://kwes.io/js/kwes.js" charset="utf-8"></script>
 </body>
 </html>
 

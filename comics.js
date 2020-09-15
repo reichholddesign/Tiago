@@ -20,8 +20,8 @@ document.documentElement.style.setProperty('--vh', `${comicVh}px`);
 
 // Set Nav
 
-const navLinks = document.querySelectorAll("li");
-navLinks[2].classList.add("nav-active");
+const navLinks = document.querySelectorAll("a");
+navLinks[5].classList.add("nav-active");
 const aLinks = document.querySelectorAll(".nav-hover");
 aLinks[2].classList.remove("nav-hover");
 
@@ -50,14 +50,15 @@ const sunIcon = document.querySelector(".fa-sun");
 const pageFooter = document.querySelector(".page-footer-ctn");
 const swipeTxt = document.querySelector(".swipe-txt");
 const controlLeft = document.querySelector(".comic-controls-ctn-left");
-
+const controlRight = document.querySelector(".comic-controls-ctn-right");
+const desktopReadInfo = document.querySelector(".desktop-read-info");
 
 
 // loop to fade comics in 
 
-let x = 2;
+let x = 1;
 
-for(x; x < 6; x++) {
+for(x; x < 7; x++) {
 
     let controller = new ScrollMagic.Controller; 
 
@@ -103,7 +104,97 @@ let choosenComic = obj.className.split(" ");
 
 switch(choosenComic[1]){
 
-case 'comic-wrapper-1':
+
+    case 'comic-wrapper-1':
+
+        if(window.innerWidth < 1000) {
+            var i = 0;
+        
+            // create object
+            imageObjs = new Array();
+        
+            // set image list
+            images = new Array();
+            let page;
+            
+            for(page = 0; page < 30; page++) {
+            let newNum = page + 1;
+            images[page]="img/comics/BogmosterAndTheFairies/jpg/mobile/" + newNum + ".jpg";
+            }
+        
+        
+        
+            // start preloading
+            for(i=0; i<=29; i++) 
+            {
+               imageObjs[i] = new Image();
+               imageObjs[i].src=images[i];
+               }
+                 
+            }
+            else {
+                var i = 0;
+        
+                // create object
+                imageObjs = new Array();
+            
+                // set image list
+                images = new Array();
+                let page;
+            
+                for(page = 0; page < 30; page++) {
+                let newNum = page + 1;
+                images[page]="img/comics/BogmosterAndTheFairies/jpg/desktop/" + newNum + ".jpg";
+            }
+             
+            
+                // start preloading
+                for(i=0; i<=29; i++) 
+                {
+                   imageObjs[i] = new Image();
+                   imageObjs[i].src=images[i];
+                   }
+            
+              
+            }
+        
+        
+        
+            imageObjs[29].onload = function() {
+            pageCounter.innerHTML = "\(" + finalPageNum + "/" + images.length + "\)";
+               loader.style.opacity = 0;
+               loader.style.display = 'none';
+               comicReader.style.display = "flex";
+               comicMain.style.backgroundImage =  "url(" + images[0] + ")";
+               comicTitle.innerHTML = "Bogmonster and the Fairies";
+        
+        
+               comicMain.addEventListener("touchstart", function() {
+                comicTouchStart(event);
+            });
+        
+            comicMain.addEventListener("touchmove", function() {
+                comicTouchMove(event);
+            });
+        
+            comicMain.addEventListener("touchend", function() {
+                comicTouchStop(event);
+            });
+        
+        
+        }
+        
+        
+        
+        
+            break;  
+
+
+
+
+
+
+case 'comic-wrapper-4':
 
 if(window.innerWidth < 1000) {
     var i = 0;
@@ -190,7 +281,7 @@ if(window.innerWidth < 1000) {
 
 
 
-    case 'comic-wrapper-2':
+    case 'comic-wrapper-5':
        
 if(window.innerWidth < 1000) {
     var i = 0;
@@ -346,7 +437,7 @@ if(window.innerWidth < 1000) {
         
             break;  
     
-            case 'comic-wrapper-4':
+            case 'comic-wrapper-2':
        
                 if(window.innerWidth < 1000) {
                     var i = 0;
@@ -424,7 +515,7 @@ if(window.innerWidth < 1000) {
                 
                     break;  
               
-                    case 'comic-wrapper-5':
+                    case 'comic-wrapper-6':
        
                         if(window.innerWidth < 1000) {
                             var i = 0;
@@ -567,9 +658,11 @@ function comicPrevPage() {
         imageChanger -= 1;
         let finalPrevPageNum = imageChanger + 1;
         comicMain.style.backgroundImage = "url(" + images[imageChanger] + ")";
-        pageCounter.innerHTML = "\(" + finalPrevPageNum + "/" + images.length + "\)";    
+        pageCounter.innerHTML = "\(" + finalPrevPageNum + "/" + images.length + "\)";  
+        controlRight.style.opacity = "1";
+        
         if(imageChanger === 0) {
-            controlLeft.style.display = "none";
+            controlLeft.style.opacity = "0";
         }
     } 
     
@@ -588,6 +681,12 @@ function comicNextPage() {
             comicMain.style.backgroundImage =  "url(" + images[imageChanger] + ")";
             pageCounter.innerHTML = "\(" + finalNextPageNum + "/" + images.length + "\)";   
             controlLeft.style.display = "flex";
+            controlLeft.style.opacity = "1";
+            desktopReadInfo.style.opacity = "0";
+            if (imageChanger === images.length - 1) {
+                controlRight.style.opacity = "0";
+                
+            }
     }  
  
     }

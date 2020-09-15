@@ -9,16 +9,24 @@ include 'header.php';
 <main>
 
 <section class="work-txt-ctn">   
-                <h3>Comics</h3>
-                <p class="desktop-indent">Born from a love of cinema, photography and good story telling; Tiago has a passion for comics. He strives to create dynamic and visually interesting stories that anyone can relate to. Explore his collection of “silent comics” created around different themes. 
+                <h3 class="comic-page-hdr">Comics</h3>
+                <p class="desktop-indent comic-intro-txt">Born from a love of cinema, photography and good story telling; Tiago has a passion for comics. He strives to create dynamic and visually interesting stories that anyone can relate to. Explore his collection of “silent comics” created around different themes. 
 </p>        
+
+
             </section>
 
 
             <section  class="comic-img-section">
 
-            <div onclick="startComics(this, 'four')" class="comic-img-wrapper comic-wrapper-4">
-                  <div class="comic-img comic-four"></div>
+            <div onclick="startComics(this, 'one')" class="comic-img-wrapper comic-wrapper-1">
+                  <div class="comic-img comic-one"></div>
+                  <p class="comic-title">Bogmonster and the Fairies</p>
+               </div> 
+
+
+            <div onclick="startComics(this, 'two')" class="comic-img-wrapper comic-wrapper-2">
+                  <div class="comic-img comic-two"></div>
                   <p class="comic-title">Single Mother</p>
                </div> 
 
@@ -27,19 +35,19 @@ include 'header.php';
                   <p class="comic-title">The Gift of Light</p>
                </div> 
 
-               <div onclick="startComics(this, 'one')" class="comic-img-wrapper comic-wrapper-1">
-                  <div class="comic-img comic-one"></div>
+               <div onclick="startComics(this, 'four')" class="comic-img-wrapper comic-wrapper-4">
+                  <div class="comic-img comic-four"></div>
                   <p class="comic-title">Rush Hour</p>
                </div> 
 
-               <div onclick="startComics(this, 'two')" class="comic-img-wrapper comic-wrapper-2">
-                  <div class="comic-img comic-two"></div>
+               <div onclick="startComics(this, 'five')" class="comic-img-wrapper comic-wrapper-5">
+                  <div class="comic-img comic-five"></div>
                   <p class="comic-title">Teamwork</p>
                </div> 
              
 
-               <div onclick="startComics(this, 'five')" class="comic-img-wrapper comic-wrapper-5">
-                  <div class="comic-img comic-five"></div>
+               <div onclick="startComics(this, 'six')" class="comic-img-wrapper comic-wrapper-6">
+                  <div class="comic-img comic-six"></div>
                   <p class="hourly-comic-txt">Hourly Comic Day</p>
                </div> 
 
@@ -57,25 +65,26 @@ include 'header.php';
 <section class="comic-reader-ctn">
 
 
-
    <div class="comic-reader-header">
-      <p class="comic-return-title"><a href="comics.php">Comics</a></p><p>/</p><p class="comic-reader-title"></p><p class="page-counter"></p>
+      <p class="comic-return-title"><a class="comic-return-link" href="comics">Comics</a></p><p>/</p><p class="comic-reader-title"></p><p class="page-counter"></p>
    </div>
    <div onclick="comicPrevPage()" class="comic-controls-ctn-left">     
-        <i  class="fas fa-step-backward"></i>
+   <i class="fas fa-chevron-left"></i>
         </div>
         
    <div class="comic-reader-img-wrapper">
 
    <div onclick="comicNextPage()" class="comic-controls-ctn-right">     
-        <i  class="fas fa-step-forward"></i>
+   <i class="fas fa-chevron-right"></i>
         </div>
 
-      <p class="swipe-txt">Swipe >>></p>
+   <div class="desktop-read-info"><p><i class="fas fa-info-circle"></i> Read comic from right to left</strong></p></div>
+
+      <p class="swipe-txt"><strong><i class="fas fa-info-circle"></i> Read comic from right to left</strong><br>> Swipe to change page</p>
       <div class="comic-reader-img"></div>
      
    </div>
-<!--   -->
+
  
 
 
@@ -87,14 +96,13 @@ include 'header.php';
 
 <aside class="page-footer-ctn">
         <div class="page-socials-ctn">
-        <div><a href="#"><i class="far fa-envelope page-social"></i></a></div>
-        <div><a href="#"><i class="fab fa-instagram page-social"></i></a></div>
-        <div><a href="#"><i class="fab fa-twitter page-social"></i></a></div>
-        <div><a href="#"><img class="page-pixiv" src="img/social/pixiv.png" alt="pixiv logo"></a></div>
+        <div><a href="mailto:tiagomattis@hotmail.co.uk" target="_blank"><i class="far fa-envelope page-social"></i></a></div>
+        <div><a href="https://www.instagram.com/teamattis" target="_blank"><i class="fab fa-instagram page-social"></i></a></div>
+        <div><a href="https://twitter.com/tiagomattis" target="_blank"><i class="fab fa-twitter page-social"></i></a></div>
+        <div><a href="https://www.pixiv.net/en/users/27312251" target="_blank"><img class="page-pixiv" src="img/social/pixiv.png" alt="pixiv logo"></a></div>
         </div>   
         <p class="tiago-txt-footer">© Tiago Mattis</p>
-      
-</aside>
+        </aside>
 
 
 

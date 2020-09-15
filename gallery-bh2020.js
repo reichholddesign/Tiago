@@ -8,6 +8,9 @@
 
 const navLinks = document.querySelectorAll("li");
 navLinks[1].classList.add("nav-active");
+const aLinks = document.querySelectorAll(".nav-hover");
+aLinks[1].classList.remove("nav-hover");
+
 
 function homeStart(){
 
@@ -29,6 +32,11 @@ const moonIcon = document.querySelector(".fa-moon");
 
 let galleryClassName = 'gallery-img';
 let titleNum = 0;
+
+// Nxt/prev 
+
+const nxtPageChevron = document.querySelector(".nxt-gallery-img");
+const prvPageChevron = document.querySelector(".prv-gallery-img");
 
 function loadBlackHero2019Gallery() {
 
@@ -74,7 +82,11 @@ let = darkToggle = 0;
 function viewImg(newClasstitle) {
 
     getLang.style.display = "none";
+
+    if(innerWidth > 800) {
     getSocialsCtn.style.display = "none";
+
+}
     socialLangToggle = 1;
 
 
@@ -99,6 +111,201 @@ galleryImgBgDiv.appendChild(galleryImgClose);
 
 
 let clickedImgElement = document.querySelector("." + newClasstitle);
+
+
+
+
+
+let seperateGalleryNumber = newClasstitle.split("img");
+
+let convertGalStrToNum = Number(seperateGalleryNumber[1]) - 1;
+
+
+if(window.innerWidth < 800) {
+
+
+    let swipeTxt = document.createElement("p");
+    swipeTxt.innerHTML = "<<< Swipe >>>";
+    swipeTxt.classList.add("swipe-txt");
+    galleryImgBgDiv.appendChild(swipeTxt);
+
+
+    galleryImgDiv.addEventListener("touchstart", function() {
+        comicTouchStart(event);
+    });
+
+    galleryImgDiv.addEventListener("touchmove", function() {
+        comicTouchMove(event);
+    });
+
+    galleryImgDiv.addEventListener("touchend", function() {
+        comicTouchStop(event);
+    });
+
+
+
+
+    function comicTouchStart(evt) {
+
+        startingX = evt.touches[0].clientX;
+    };
+    
+    
+    
+    
+    
+    function comicTouchMove(evt) {
+    
+        let touch = evt.touches[0];
+        let change = startingX - touch.clientX;
+        
+    };
+    
+    
+    function comicTouchStop(evt) {
+        let change = startingX - evt.changedTouches[0].clientX;
+        if(change > 0 && convertGalStrToNum < 29) {
+            swipeTxt.style.opacity = "0";
+            convertGalStrToNum += 1;
+        let getCurrentGalleryImg = document.querySelector(".clicked-gallery-img")
+    
+    
+        Modernizr.on('webp', function (result) {
+            if (result) {
+                getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/webp/desktop/' + blackHeroTitles20[convertGalStrToNum] + '.webp)';
+               
+            }
+            else {
+                getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/jpg/desktop/' + blackHeroTitles20[convertGalStrToNum] + '.jpg)';
+              
+            }
+          });
+    
+    
+          if(convertGalStrToNum === 29) {
+              nxtPageChevron.style.opacity = "0";
+          }
+    
+      
+        }
+        else if(change < 0 && convertGalStrToNum > 0) {
+            convertGalStrToNum -= 1;
+    
+            let getCurrentGalleryImg = document.querySelector(".clicked-gallery-img")
+        
+        
+            Modernizr.on('webp', function (result) {
+                if (result) {
+                    getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/webp/desktop/' + blackHeroTitles20[convertGalStrToNum] + '.webp)';
+                   
+                }
+                else {
+                    getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/jpg/desktop/' + blackHeroTitles20[convertGalStrToNum] + '.jpg)';
+                  
+                }
+              });
+        
+              if(convertGalStrToNum === 0) {
+               prvPageChevron.style.opacity = "0";
+           }
+            
+        }
+    
+    } 
+
+
+} else if(window.innerWidth > 800) {    
+
+    nxtPageChevron.style.display = "flex";
+    prvPageChevron.style.display = "flex";
+
+
+if (convertGalStrToNum === 0) {
+    prvPageChevron.style.opacity = "0";
+} else if (convertGalStrToNum > 0) {
+    prvPageChevron.style.opacity = "1";
+}
+
+if (convertGalStrToNum === 29) {
+    nxtPageChevron.style.opacity = "0";
+} else if (convertGalStrToNum < 29) {
+    nxtPageChevron.style.opacity = "1";
+}
+
+
+
+
+
+
+nxtPageChevron.addEventListener("click", () =>{
+
+    prvPageChevron.style.opacity = "1";
+
+    if(convertGalStrToNum < 29) {
+        convertGalStrToNum += 1;
+    let getCurrentGalleryImg = document.querySelector(".clicked-gallery-img")
+
+
+    Modernizr.on('webp', function (result) {
+        if (result) {
+            getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/webp/mobile/' + blackHeroTitles20[convertGalStrToNum] + '.webp)';
+           
+        }
+        else {
+            getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/jpg/mobile/' + blackHeroTitles20[getCurrentGalleryImg] + '.jpg)';
+          
+        }
+      });
+
+
+      if(convertGalStrToNum === 29) {
+        nxtPageChevron.style.opacity = "0";
+    }
+
+
+
+    }
+
+
+})
+
+prvPageChevron.addEventListener("click", () =>{
+ 
+    nxtPageChevron.style.opacity = "1";
+
+
+     if(convertGalStrToNum > 0) {
+        convertGalStrToNum -= 1;
+
+     let getCurrentGalleryImg = document.querySelector(".clicked-gallery-img")
+ 
+ 
+     Modernizr.on('webp', function (result) {
+         if (result) {
+            getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/webp/mobile/' + blackHeroTitles20[convertGalStrToNum] + '.webp)';
+            
+         }
+         else {
+            getCurrentGalleryImg.style.backgroundImage = 'url(img/illustrations/DailyBlackHero_20/jpg/mobile/' + blackHeroTitles20[getCurrentGalleryImg] + '.jpg)';
+           
+         }
+       });
+ 
+       if(convertGalStrToNum === 0) {
+        prvPageChevron.style.opacity = "0";
+    }
+
+
+
+
+
+     }
+ 
+ 
+ })
+
+}
+
 
 let clickedImgElementUrl = clickedImgElement.style.backgroundImage;
 
@@ -154,7 +361,15 @@ getGalleryImgBG.addEventListener('click', function() {
 
 function closeGallery(scrollTop) {
 
-    resetSocialLangToggle();
+    nxtPageChevron.style.display = "none";
+    prvPageChevron.style.display = "none";
+
+    if(window.innerHeight > 800) {
+        resetSocialLangToggle();
+    
+    }
+
+    
     const tlBgGetTxt = new TimelineMax({delay: 0.1});
     tlBgGetTxt.fromTo(gallerySection, 0.4, {opacity: 0}, {opacity: 1});
     tlBgGetTxt.fromTo(workTxtHdr, 0.1, {opacity: 0}, {opacity: 1});
@@ -186,7 +401,9 @@ function closeGallery(scrollTop) {
 
 function darkmode() {
     const galleryImgBg = document.querySelector(".clicked-gallery-img-bg");
-
+    const nxtPageChevron = document.querySelector(".nxt-gallery-img");
+    const prvPageChevron = document.querySelector(".prv-gallery-img");
+    const swipeTxt = document.querySelector(".swipe-txt");
 
     if(darkToggle == 0) {
         sunIcon.style.opacity ="1";
@@ -194,11 +411,28 @@ function darkmode() {
         galleryImgBg.classList.add("darkmode-background");
         darkToggle = 1;
 
+        if(window.innerWidth > 800) {
+         
+            nxtPageChevron.style.color = "white";
+            prvPageChevron.style.color = "white";
+    } else if(window.innerWidth < 800) {
+        swipeTxt.style.color = "white";
+
+    }
+
     } else if (darkToggle == 1) {
         sunIcon.style.opacity ="0";
         moonIcon.style.opacity = "1";
         galleryImgBg.classList.remove("darkmode-background");
         darkToggle = 0;
+
+        if(window.innerWidth > 800) {
+            nxtPageChevron.style.color = "black";
+            prvPageChevron.style.color = "black";
+         } else if(window.innerWidth < 800) {
+            const swipeTxt = document.querySelector(".swipe-txt");
+            swipeTxt.style.color = "black";
+       }
 
     }
 

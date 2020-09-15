@@ -1,5 +1,42 @@
+function homeStart() {
+
+
+  if (window.innerWidth < 800) {
+  
+    const tlBg = new TimelineMax({delay: 0.1});
+    tlBg.fromTo(homeBg[0], 0.9, {opacity: 0}, {opacity: 1});
+    
+  
+    const tlBgOne = new TimelineMax({delay: 0.1});
+    tlBgOne.fromTo(freelnaceTxt, 0.9, {opacity: 0}, {opacity: 1});
+  
+    const tlArrow = new TimelineMax({delay: 0.1});
+    tlArrow.fromTo(arrowDown, 0.9, {y: 100, opacity: 0}, {y: 0, opacity: 1});
+  
+  }
+  
+  else if (window.innerWidth > 800) {
+    const tlBg = new TimelineMax({delay: 0.1});
+    tlBg.fromTo(homeBg[0], 0.9, {opacity: 0}, {opacity: 1});
+    
+  
+  
+    const tlArrow = new TimelineMax({delay: 0.1});
+    tlArrow.fromTo(arrowDown, 0.9, {y: 100, opacity: 0}, {y: 0, opacity: 1});
+  
+    backgroundSlide();
+  
+  
+  
+  }
+  
+  
+  }
+
+
+
 let scrollKey = 0;
-console.log(scrollKey);
+
 
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
@@ -64,7 +101,7 @@ const getFluencyDiv = document.querySelector(".fluency");
 const getWorkTogTxt = document.querySelector(".work-tog-txt");
 const getTiagoContactImg = document.querySelector(".contact-tiago-img");
 const getForm = document.querySelector(".form-wrp");
-
+const selfQuoteImg = document.querySelector(".self-img");
 
 
 
@@ -104,10 +141,12 @@ function backgroundSlide() {
 window.requestAnimationFrame(backgroundSlide);  
 
 
-  if (newPosition < -1000) {
+  if (newPosition < -2000) {
 
+    window.cancelAnimationFrame(backgroundSlide);
+    homeBg[0].style.transform = "translate(0, 0)";
 
-  nextPage();
+  
   
   }
 
@@ -129,40 +168,7 @@ window.requestAnimationFrame(backgroundSlide);
 
 
 
-function homeStart() {
 
-
-if (window.innerWidth < 800) {
-
-  const tlBg = new TimelineMax({delay: 0.1});
-  tlBg.fromTo(homeBg[0], 0.9, {opacity: 0}, {opacity: 1});
-  
-
-  const tlBgOne = new TimelineMax({delay: 0.1});
-  tlBgOne.fromTo(freelnaceTxt, 0.9, {opacity: 0}, {opacity: 1});
-
-  const tlArrow = new TimelineMax({delay: 0.1});
-  tlArrow.fromTo(arrowDown, 0.9, {y: 100, opacity: 0}, {y: 0, opacity: 1});
-
-}
-
-else if (window.innerWidth > 800) {
-  const tlBg = new TimelineMax({delay: 0.1});
-  tlBg.fromTo(homeBg[0], 0.9, {opacity: 0}, {opacity: 1});
-  
-
-
-  const tlArrow = new TimelineMax({delay: 0.1});
-  tlArrow.fromTo(arrowDown, 0.9, {y: 100, opacity: 0,}, {y: 0, opacity: 1});
-
-  backgroundSlide();
-
-
-
-}
-
-
-}
 
 
 const controller = new ScrollMagic.Controller();
@@ -170,7 +176,7 @@ const controller = new ScrollMagic.Controller();
 
 //Scenes
 
-const heroFade = TweenMax.fromTo(getHeroSection[0], 3, { opacity: 1}, { opacity: 0});
+const heroFade = TweenMax.fromTo(getHeroSection[0], 3, { opacity: 1}, { opacity: 0.0});
 
 
 let scene = new ScrollMagic.Scene({
@@ -212,7 +218,7 @@ window.addEventListener('scroll', function() {
   let aboutCtnOpacity = aboutImgCompStyle.opacity;
  
  
-if (aboutCtnOpacity == 0 && opacityControl == 0) {
+if (aboutCtnOpacity < 0.1 && opacityControl < 0.1) {
   
   const tl = new TimelineMax({delay: 0.75});
 tl.fromTo(getGirlOnTrainImg, 0.4, {opacity: 1}, {opacity: 0.2});
@@ -286,6 +292,7 @@ function addLastHomeSecitons() {
     
     
     let quoteAppear = TweenMax.fromTo(selfQuote, 2, {opacity: 0}, {opacity: 1});
+    let quoteImgAppear = TweenMax.fromTo(selfQuoteImg, 2, {opacity: 0}, {opacity: 1});
 
 
     
@@ -297,7 +304,7 @@ function addLastHomeSecitons() {
       reverse: false
     }) 
     
-    .setTween(quoteAppear)
+    .setTween(quoteAppear, quoteImgAppear)
     .addTo(controller);
 
 
@@ -334,9 +341,9 @@ function addLastHomeSecitons() {
 let showSkills = 0;
 
  window.addEventListener("scroll", function(){
-  quoteStyle= window.getComputedStyle(selfQuote);
+  quoteStyle = window.getComputedStyle(selfQuoteImg);
   quoteOpacity = quoteStyle.opacity;
-  if(quoteOpacity > 0.7 && showSkills === 0) {
+  if(quoteOpacity > 0.45 && showSkills === 0) {
     const tlSkills = new TimelineMax({delay: 0.75});
     tlSkills.fromTo(fadeInOverTxt, 0.8, {opacity: 0, scale: 0.8}, {opacity: 1, scale: 1});
     showSkills = 1;
@@ -348,17 +355,18 @@ let showSkills = 0;
 
   }
 
-
  })   
 
 
 function contactDisplay() {
+let checkLanguage = sessionStorage.getItem('language');
 
 const tlContact = new TimelineMax({delay: 0.25});
 tlContact.fromTo(getTiagoContactImg, 0.6, {opacity: 0, scale: 0.8}, {opacity: 1, scale: 1});
 tlContact.fromTo(getWorkTogTxt, 0.6, {opacity: 0}, {opacity: 1});
 tlContact.fromTo(getForm, 0.6, {opacity: 0}, {opacity: 1});
 arrowDown.style.display = "none";
+
 
 setTimeout( () => {
 getWorkTogTxt.style.transition = "opacity 0.5s ease-in-out";
@@ -369,37 +377,23 @@ setTimeout( () => {
   }, 3500);
 
   setTimeout( () => {
-    getWorkTogTxt.innerHTML = "Tiago is available for commisions";
+    if(!checkLanguage || checkLanguage == 'english'){
+    getWorkTogTxt.innerHTML = "Tiago is available for new projects and commisions";
+  } else if(checkLanguage == "japanese"){
+    getWorkTogTxt.innerHTML = "お仕事のご依頼は、メールにてお気楽によろしくお願いいたします";
+
+  }
     }, 4000);
 
     setTimeout( () => {
       getWorkTogTxt.style.opacity = "1";
       }, 4500);
 
-/*
-setTimeout( () => {
-  const tlTxtChgRemove = new TimelineMax({delay: 0.25});
-  tlTxtChgRemove.fromTo(getWorkTogTxt, 0.6, {opacity: 1}, {opacity: 0});
-
-  setTimeout( () => {
-
-
-  }, 200)
-
-  const tlTxtChgAppear = new TimelineMax({delay: 0.85});
-  tlTxtChgAppear.fromTo(getWorkTogTxt, 0.6, {opacity: 0}, {opacity: 1});
-  tlTxtChgAppear.fromTo(getWorkTogTxt, 0.6, {opacity: 0}, {opacity: 1});
-
-
-} , 3000)
-*/
-
 
 
 }
 
-
-
+ 
 
 
 

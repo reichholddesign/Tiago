@@ -8,7 +8,7 @@ include 'header.php';
 <main class="work-main-ctn">
 
 <div class="work-txt-header">
-      <p class="comic-return-title"><a class="light-hover" href="work.php">Work</a></p><p>/</p><p class="comic-reader-title">T-Sensei Stamps</p>
+      <p class="comic-return-title"><a class="light-hover" href="work">Work</a></p><p>/</p><p class="comic-reader-title">T-Sensei Stamps</p>
    </div>
 
 <section class="gallery-img-section">
@@ -34,6 +34,9 @@ include 'header.php';
 
 
 
+<div class="nxt-gallery-img" > <i class="fas fa-chevron-right"></i></div>
+<div class="prv-gallery-img" > <i class="fas fa-chevron-left"></i></div>          
+        
 
 
 
